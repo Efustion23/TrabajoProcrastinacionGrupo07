@@ -196,6 +196,9 @@ tbody tr:nth-child(even) { background: var(--bg); }
 .footer .note { color: inherit; opacity: .85; }
 .footer__title { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; }
 .footer p:last-child { margin-bottom: 0; }
+@media (prefers-color-scheme: dark) {
+  .footer { background: var(--surface); color: var(--text); }
+}
 
 @media print {
   .topbar, .filters, .skip { display: none; }
