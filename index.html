@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procrastinación académica en Ingeniería · Equipo 07</title>
+  <meta name="description" content="Producto digital del PU3 de Investigación Académica 2026-20: factores asociados a la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, 2026.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#portada">PU3 · Equipo 07</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Secciones</button>
+      <nav id="menu" class="nav" aria-label="Secciones del sitio">
+        <ul>
+          <li><a href="#tema">Tema</a></li>
+          <li><a href="#variables">Variables</a></li>
+          <li><a href="#antecedentes">Antecedentes</a></li>
+          <li><a href="#teoria">Base teórica</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#referencias">Referencias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- 1. Portada -->
+    <section id="portada" class="cover" aria-labelledby="titulo">
+      <div class="wrap">
+        <img class="cover__logo" src="img/logo-continental.jpg" width="337" height="92" alt="Logotipo de la Universidad Continental">
+        <p class="cover__inst">Facultad de Ingeniería<br>E.A.P. Ingeniería de Sistemas e Informática</p>
+        <h1 id="titulo">Factores asociados a la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, 2026</h1>
+
+        <dl class="facts">
+          <div><dt>Asignatura</dt><dd>Investigación Académica 2026-20</dd></div>
+          <div><dt>NRC</dt><dd>44761 y 44778</dd></div>
+          <div><dt>Equipo</dt><dd>07</dd></div>
+          <div><dt>Docente</dt><dd>Colachagua Obando, Julio César</dd></div>
+          <div><dt>Fecha de entrega</dt><dd><time datetime="2026-10-30">30 de octubre de 2026</time></dd></div>
+        </dl>
+
+        <h2 class="h3">Integrantes</h2>
+        <p class="note">Carrera según la carátula; rol y responsabilidad según la Tabla 1 (Distribución de responsabilidades).</p>
+        <ul class="team">
+          <li>
+            <p class="team__name">Antezana Alonzo Alexandra Dayana</p>
+            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
+            <p class="team__role">Secretaria 1</p>
+            <p>Anota los acuerdos de cada reunión en el acta y busca y sistematiza las fuentes de los factores personales (V1) y el antecedente local.</p>
+          </li>
+          <li>
+            <p class="team__name">Campos Castañeda Luis Jeffri</p>
+            <p class="team__meta">Ingeniería de Minas</p>
+            <p class="team__role">Portavoz 1</p>
+            <p>Comunica los avances al docente, busca los antecedentes internacionales y los modelos de V2, y diseña el producto digital.</p>
+          </li>
+          <li>
+            <p class="team__name">Napan Hernandez Luisana Carolina</p>
+            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
+            <p class="team__role">Subcoordinadora</p>
+            <p>Busca los antecedentes nacionales, arma el control de citas y referencias (Tabla 12) y revisa que no queden comentarios abiertos antes de cada hito.</p>
+          </li>
+          <li>
+            <p class="team__name">Prudencio Rios Denis Wilder</p>
+            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
+            <p class="team__role">Coordinador 2</p>
+            <p>Busca la definición, la teoría y el instrumento de la procrastinación (V3) y redacta esa fila de la Tabla 6.</p>
+          </li>
+          <li>
+            <p class="team__name">Tornero Bermúdez Diego Ali Gadiel</p>
+            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
+            <p class="team__role">Coordinador 1</p>
+            <p>Modera las reuniones, redacta la teoría de los factores académicos y la bitácora, edita la versión final y la sube al aula virtual.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. Tema -->
+    <section id="tema" aria-labelledby="h-tema">
+      <div class="wrap">
+        <p class="kicker">Tabla 3 · Delimitación del tema</p>
+        <h2 id="h-tema">Tema de investigación</h2>
+
+        <h3>Tema delimitado</h3>
+        <p class="lead">Factores asociados a la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, 2026.</p>
+        <dl class="grid4">
+          <div><dt>Variables</dt><dd>Factores personales (V1), factores académicos (V2) y procrastinación académica (V3, variable principal).</dd></div>
+          <div><dt>Población</dt><dd>Estudiantes de pregrado de la modalidad presencial de la Facultad de Ingeniería.</dd></div>
+          <div><dt>Lugar</dt><dd>Sede Huancayo de la Universidad Continental.</dd></div>
+          <div><dt>Periodo</dt><dd>Semestre académico 2026-20.</dd></div>
+        </dl>
+
+        <h3>Pregunta de investigación</h3>
+        <p class="question">¿Qué relación existe entre los factores personales y académicos y la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, durante el año 2026?</p>
+
+        <h3>Objetivo general</h3>
+        <p>Determinar la relación que existe entre los factores personales y académicos y la procrastinación académica en los estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, durante el año 2026.</p>
+
+        <h3>Objetivos específicos</h3>
+        <ol class="objectives">
+          <li>Describir los factores personales y académicos y el nivel de procrastinación académica que presentan los estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, durante el año 2026.</li>
+          <li>Establecer la dirección y la intensidad de la relación entre los factores personales (autorregulación, autoeficacia académica y perfeccionismo) y la procrastinación académica en los estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, durante el año 2026.</li>
+          <li>Establecer la dirección y la intensidad de la relación entre los factores académicos (carga académica, hábitos de estudio y claridad de consignas y plazos) y la procrastinación académica en los estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, durante el año 2026.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. Variables -->
+    <section id="variables" aria-labelledby="h-variables">
+      <div class="wrap">
+        <p class="kicker">Tablas 3 y 6</p>
+        <h2 id="h-variables">Variables e instrumentos</h2>
+        <p>El estudio trabaja con tres variables. Los factores personales y académicos se miden con un cuestionario propio de 16 ítems, y la procrastinación académica, con la Escala de Procrastinación Académica (EPA) de 8 ítems validada en universitarios peruanos (Chenet Zuta et al., 2025).</p>
+
+        <div class="vars">
+          <article class="var">
+            <p class="var__tag">V1</p>
+            <h3>Factores personales</h3>
+            <h4>Dimensiones</h4>
+            <ul class="dims">
+              <li><strong>Autorregulación:</strong> planificación de actividades, fijación de metas y perseverancia.</li>
+              <li><strong>Autoeficacia académica:</strong> confianza en la propia capacidad para cumplir tareas y evaluaciones.</li>
+              <li><strong>Perfeccionismo:</strong> exigencia excesiva y temor a equivocarse.</li>
+            </ul>
+            <h4>Escala de respuesta</h4>
+            <ol class="scale" style="--n:5">
+              <li><span class="scale__n">1</span><span class="scale__l">Nunca</span></li>
+              <li><span class="scale__n">2</span><span class="scale__l">Casi nunca</span></li>
+              <li><span class="scale__n">3</span><span class="scale__l">A veces</span></li>
+              <li><span class="scale__n">4</span><span class="scale__l">Casi siempre</span></li>
+              <li><span class="scale__n">5</span><span class="scale__l">Siempre</span></li>
+            </ol>
+            <h4>Puntaje y niveles</h4>
+            <p>Puntaje del factor: 8 a 40. Niveles: bajo (8–18), medio (19–29) y alto (30–40).</p>
+            <details class="items">
+              <summary>Ver los ítems 1 a 8 del cuestionario propio</summary>
+              <h5>Autorregulación</h5>
+              <ol start="1">
+                <li>Planifico en una agenda o calendario mis actividades académicas de la semana. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Me fijo metas concretas antes de cada sesión de estudio. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Continúo con una tarea académica aunque me resulte difícil. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+              </ol>
+              <h5>Autoeficacia académica</h5>
+              <ol start="4">
+                <li>Confío en mi capacidad para resolver los problemas de mis cursos de Ingeniería. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Me siento capaz de obtener buenos resultados en mis evaluaciones. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Dudo de poder cumplir con las exigencias de mis cursos.</li>
+              </ol>
+              <h5>Perfeccionismo</h5>
+              <ol start="7">
+                <li>Me exijo que mis trabajos queden perfectos antes de darlos por terminados.</li>
+                <li>Me preocupa mucho equivocarme o recibir una mala calificación.</li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="var">
+            <p class="var__tag">V2</p>
+            <h3>Factores académicos</h3>
+            <h4>Dimensiones</h4>
+            <ul class="dims">
+              <li><strong>Carga académica:</strong> número y simultaneidad de tareas y evaluaciones.</li>
+              <li><strong>Hábitos de estudio:</strong> organización y regularidad del estudio.</li>
+              <li><strong>Claridad de consignas y plazos:</strong> comprensión de las instrucciones y de las fechas de entrega.</li>
+            </ul>
+            <h4>Escala de respuesta</h4>
+            <ol class="scale" style="--n:5">
+              <li><span class="scale__n">1</span><span class="scale__l">Nunca</span></li>
+              <li><span class="scale__n">2</span><span class="scale__l">Casi nunca</span></li>
+              <li><span class="scale__n">3</span><span class="scale__l">A veces</span></li>
+              <li><span class="scale__n">4</span><span class="scale__l">Casi siempre</span></li>
+              <li><span class="scale__n">5</span><span class="scale__l">Siempre</span></li>
+            </ol>
+            <h4>Puntaje y niveles</h4>
+            <p>Puntaje del factor: 8 a 40. Niveles: bajo (8–18), medio (19–29) y alto (30–40).</p>
+            <details class="items">
+              <summary>Ver los ítems 9 a 16 del cuestionario propio</summary>
+              <h5>Carga académica</h5>
+              <ol start="9">
+                <li>En una misma semana tengo varias tareas o evaluaciones de distintos cursos.</li>
+                <li>Las fechas de entrega de mis cursos coinciden entre sí.</li>
+                <li>La cantidad de trabajos de mis cursos supera el tiempo que tengo disponible.</li>
+              </ol>
+              <h5>Hábitos de estudio</h5>
+              <ol start="12">
+                <li>Estudio en un horario fijo durante la semana. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Repaso los temas de clase en la misma semana en que se desarrollan. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Organizo mis materiales y apuntes antes de empezar a estudiar. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+              </ol>
+              <h5>Claridad de consignas y plazos</h5>
+              <ol start="15">
+                <li>Las instrucciones de los trabajos que dejan mis docentes me resultan claras. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+                <li>Conozco con anticipación las fechas de entrega y de evaluación de mis cursos. <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="var var--main">
+            <p class="var__tag">V3 · variable principal</p>
+            <h3>Procrastinación académica</h3>
+            <h4>Dimensión</h4>
+            <p>Unidimensional: un solo factor, la postergación académica. Se mide con la EPA de 8 ítems validada en universitarios peruanos (Chenet Zuta et al., 2025).</p>
+            <h4>Indicadores</h4>
+            <ul class="dims">
+              <li>Postergación del inicio y del término de las tareas (ítems 3 y 7).</li>
+              <li>Postergación de la preparación de evaluaciones y de la revisión de trabajos (ítems 1 y 8).</li>
+              <li>Baja persistencia y automotivación en el estudio (ítems 4, 5 y 6).</li>
+              <li>Demora en buscar ayuda académica (ítem 2).</li>
+            </ul>
+            <h4>Escala de respuesta</h4>
+            <ol class="scale scale--ends" style="--n:7">
+              <li><span class="scale__n">1</span><span class="scale__l">Nunca</span></li>
+              <li><span class="scale__n">2</span></li>
+              <li><span class="scale__n">3</span></li>
+              <li><span class="scale__n">4</span></li>
+              <li><span class="scale__n">5</span></li>
+              <li><span class="scale__n">6</span></li>
+              <li><span class="scale__n">7</span><span class="scale__l">Siempre</span></li>
+            </ol>
+            <p class="note">1 = nunca, 2 = muy pocas veces, 3 = algunas veces, 4 = indeciso, 5 = frecuentemente, 6 = muy frecuentemente, 7 = siempre.</p>
+            <h4>Puntaje y niveles</h4>
+            <p>Puntaje total: 8 a 56. Niveles que proponemos: bajo (8–24), medio (25–40) y alto (41–56).</p>
+            <details class="items">
+              <summary>Ver el ítem de ejemplo</summary>
+              <p class="example">«Generalmente me preparo por adelantado para los exámenes» (ítem 1) <span class="rev">(R)<span class="sr-only"> ítem inverso</span></span></p>
+              <p>Los 8 ítems se aplican con la redacción textual de la versión publicada, sin modificarlos (Chenet Zuta et al., 2025).</p>
+            </details>
+          </article>
+        </div>
+
+        <p class="note rev-note"><span class="rev" aria-hidden="true">(R)</span> Ítem de puntuación inversa: se puntúa al revés para que un puntaje mayor indique mayor presencia del factor de riesgo.</p>
+        <p class="note">Fuente de los ítems, las escalas y los niveles: tabla de operacionalización de variables (matriz de consistencia del proyecto).</p>
+
+        <blockquote class="quote">
+          <p>Chenet Zuta et al. (2025) definen la procrastinación académica como "una dificultad en los procesos de autorregulación que provoca la demora voluntaria de actividades planificadas" (p. 59).</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 4. Antecedentes -->
+    <section id="antecedentes" aria-labelledby="h-antecedentes">
+      <div class="wrap">
+        <p class="kicker">Tabla 5 · Matriz de antecedentes</p>
+        <h2 id="h-antecedentes">Antecedentes</h2>
+        <p>Diez estudios sustentan la investigación. Abre cada tarjeta para ver su objetivo general y la valoración crítica del equipo.</p>
+
+        <div class="filters" role="group" aria-label="Filtrar antecedentes por ámbito">
+          <button type="button" data-filter="todos" aria-pressed="true">Todos (10)</button>
+          <button type="button" data-filter="internacional" aria-pressed="false">Internacional (6)</button>
+          <button type="button" data-filter="nacional" aria-pressed="false">Nacional (3)</button>
+          <button type="button" data-filter="local" aria-pressed="false">Local (1)</button>
+        </div>
+        <p class="sr-only" aria-live="polite" id="filtro-estado"></p>
+
+        <ol class="cards">
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">1</span></p>
+            <h3>Montilla et al. (2020)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidad Tecnológica de Panamá, Panamá</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): los autores no lo declaran, pero miden las variables con escalas y las relacionan estadísticamente.</dd></div>
+              <div><dt>Hallazgo</dt><dd>La autorregulación académica fue el factor que más favoreció la procrastinación, seguida del mecanismo de enseñanza. La correlación entre procrastinación e índice académico fue negativa, pero no significativa (r = −0,175) (Montilla et al., 2020).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"determinar los factores personales y externos que influyen en la procrastinación en hombres y mujeres, de distintas carreras de ingeniería, con el fin de evaluar lo que afecta en mayor medida el rendimiento académico" (Montilla et al., 2020, p. 90).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta, porque estudia a alumnos de Ingeniería como los nuestros. <strong>Confiabilidad:</strong> media; es una revista de iniciación científica, aunque el muestreo es estratificado y la escala tiene buena consistencia (α = 0,803). <strong>Aporte:</strong> nos confirma que la autorregulación pesa más que los factores externos, como la tecnología o la forma de enseñar.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">2</span></p>
+            <h3>Hidayat y Hasim (2023)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Institut Pendidikan Indonesia Garut, Indonesia (la universidad de la muestra no se precisa)</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): calculan la prevalencia con un cuestionario estandarizado.</dd></div>
+              <div><dt>Hallazgo</dt><dd>El 52 % de los estudiantes admitió procrastinar con frecuencia; la mala gestión del tiempo, el miedo al fracaso y las distracciones fueron los factores más relevantes (Hidayat y Hasim, 2023).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p><span lang="en">"This study investigated college students' prevalence and underlying factors of academic procrastination"</span> ["Este estudio investigó la prevalencia y los factores subyacentes de la procrastinación académica en estudiantes universitarios", traducción propia] (Hidayat y Hasim, 2023, p. 27).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> media; los participantes estudian inglés, no Ingeniería. <strong>Confiabilidad:</strong> media; usa una escala conocida, pero la muestra es pequeña y el número de participantes no es el mismo en todo el artículo (99 o 100). <strong>Aporte:</strong> nos da una cifra de referencia (52 %) y nos recuerda medir la gestión del tiempo y el miedo a fallar.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">3</span></p>
+            <h3>Elizondo et al. (2024)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidades de Chile (no se precisan)</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): ponen a prueba un modelo teórico con ecuaciones estructurales.</dd></div>
+              <div><dt>Hallazgo</dt><dd>La fijación de metas y la perseverancia cumplen un papel clave en la autorregulación exitosa; los autores recomiendan fortalecer las habilidades autorreguladoras de los universitarios (Elizondo et al., 2024).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p><span lang="en">"The aim of the present study is to extend existing knowledge about the relationships between self-regulation and procrastination"</span> ["El objetivo del presente estudio es ampliar el conocimiento existente sobre las relaciones entre la autorregulación y la procrastinación", traducción propia] (Elizondo et al., 2024, p. 888).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta; une directamente la autorregulación (V1) con la procrastinación (V3). <strong>Confiabilidad:</strong> alta; es un artículo revisado por pares, con 433 participantes y un modelo estructural con buen ajuste. <strong>Aporte:</strong> es la base teórica de nuestro estudio y nos dio dos indicadores de V1: fijarse metas y perseverar.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">4</span></p>
+            <h3>Mejia et al. (2023)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Diez países de Latinoamérica (estudio multicéntrico en 16 universidades)</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): estiman asociaciones con modelos multivariados en estudiantes de varios países.</dd></div>
+              <div><dt>Hallazgo</dt><dd>Hubo mayor procrastinación en las universidades nacionales y en los primeros años de estudio; el sexo no fue significativo en el análisis ajustado, y Química, Humanidades y Enfermería fueron las carreras con mayores niveles (Mejia et al., 2023).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"Determinar los factores asociados a la procrastinación en estudiantes universitarios de diez países de Latinoamérica" (Mejia et al., 2023, sección Resumen).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta; trabaja con universitarios de la región, incluidos estudiantes de Ingeniería. <strong>Confiabilidad:</strong> alta; reúne a 2978 estudiantes de 16 universidades y usa una escala con α = 0,78. <strong>Aporte:</strong> como el año de estudios influyó, decidimos estratificar nuestra muestra por ciclos.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">5</span></p>
+            <h3>Johansson et al. (2023)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Ocho universidades del área de Estocolmo y de Örebro, Suecia</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): siguen a una cohorte durante nueve meses y miden la salud con instrumentos validados.</dd></div>
+              <div><dt>Hallazgo</dt><dd>La procrastinación se asoció, nueve meses después, con más síntomas de depresión, ansiedad y estrés, dolor incapacitante, peor calidad del sueño, inactividad física, soledad y dificultades económicas; los autores consideran pequeñas estas asociaciones (Johansson et al., 2023).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p><span lang="en">"To evaluate the association between procrastination and subsequent health outcomes among university students in Sweden"</span> ["Evaluar la asociación entre la procrastinación y los resultados de salud posteriores en estudiantes universitarios de Suecia", traducción propia] (Johansson et al., 2023, p. 1).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> media; no estudia causas, sino consecuencias. <strong>Confiabilidad:</strong> alta; sigue durante nueve meses a 3525 estudiantes y se publicó en una revista médica de alto impacto. <strong>Aporte:</strong> muestra por qué el problema importa y nos llevó a no tratar la ansiedad y el estrés como factores, porque también pueden ser consecuencias.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="internacional">
+            <p class="card__top"><span class="badge">Internacional</span><span class="card__n">6</span></p>
+            <h3>Ben Alaya et al. (2021)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Facultades de Medicina, Derecho e Ingeniería de Túnez (autores del Hospital Razi, Manouba)</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): miden con escalas y calculan correlaciones y razones de probabilidad.</dd></div>
+              <div><dt>Hallazgo</dt><dd>La procrastinación se asoció con el fracaso académico, la impulsividad y el consumo de alcohol; estudiar Ingeniería duplicó el riesgo frente a Medicina (ORa = 2,01) (Ben Alaya et al., 2021).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p><span lang="en">"To determine the impact of academic procrastination on studies and academic performances and identify associated factors"</span> ["Determinar el impacto de la procrastinación académica en los estudios y el rendimiento académico, e identificar los factores asociados", traducción propia] (Ben Alaya et al., 2021, p. S760).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta; incluye estudiantes de Ingeniería. <strong>Confiabilidad:</strong> media; es un resumen de congreso, aunque con 1019 participantes y escalas reconocidas. <strong>Aporte:</strong> sugiere que Ingeniería es una carrera de riesgo y nos advierte que el perfeccionismo no siempre aumenta la procrastinación.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="nacional">
+            <p class="card__top"><span class="badge">Nacional</span><span class="card__n">7</span></p>
+            <h3>Charaña Mamani y Vílchez Julon (2021)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidad privada de Tarapoto, Perú</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): correlacionan la personalidad y la procrastinación con instrumentos validados.</dd></div>
+              <div><dt>Hallazgo</dt><dd>La responsabilidad (rho = −0,590), la amabilidad (rho = −0,457) y la extraversión (rho = −0,226) se relacionaron inversamente con la procrastinación; el neuroticismo, de forma directa (rho = 0,166) (Charaña Mamani y Vílchez Julon, 2021).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"determinar la relación entre las dimensiones de la personalidad y la procrastinación académica" (Charaña Mamani y Vílchez Julon, 2021, p. 53).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> media-alta; son universitarios peruanos, aunque no de Ingeniería, y usan la EPA con un diseño correlacional como el nuestro. <strong>Confiabilidad:</strong> media-alta; revista indexada e instrumentos validados. <strong>Aporte:</strong> confirma que los rasgos de personalidad, sobre todo la responsabilidad, pesan en la procrastinación (V1).</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="nacional">
+            <p class="card__top"><span class="badge">Nacional</span><span class="card__n">8</span></p>
+            <h3>Urco Cáceres (2019)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidad Católica Sedes Sapientiae, filial Tarma, Perú</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): contrastan su hipótesis con la correlación de Pearson.</dd></div>
+              <div><dt>Hallazgo</dt><dd>No hubo relación significativa entre la gestión del tiempo y la procrastinación (r = −0,084); el 82,4 % mostró tendencia alta a procrastinar (Urco Cáceres, 2019).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"determinar la relación entre la gestión del tiempo y la procrastinación académica en los estudiantes de la facultad de ingeniería de la Universidad Católica Sedes Sapientiae, filial Tarma, 2018" (Urco Cáceres, 2019, p. ix).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta; estudia una Facultad de Ingeniería peruana con un diseño igual al nuestro. <strong>Confiabilidad:</strong> media; es una tesis de maestría con 214 participantes e instrumentos con confiabilidad reportada. <strong>Aporte:</strong> como la gestión del tiempo, por sí sola, no explicó la procrastinación, vemos necesario estudiar varios factores a la vez.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="nacional">
+            <p class="card__top"><span class="badge">Nacional</span><span class="card__n">9</span></p>
+            <h3>Duda-Macera y Gallardo-Echenique (2022)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidad privada de Lima, Perú</dd></div>
+              <div><dt>Paradigma</dt><dd>Interpretativo (inferido): buscan comprender la experiencia de los estudiantes a partir de entrevistas.</dd></div>
+              <div><dt>Hallazgo</dt><dd>Los estudiantes reconocen hábitos de estudio débiles, deficiente gestión del tiempo, distracción por la tecnología, estrés y motivación variable (Duda-Macera y Gallardo-Echenique, 2022).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"comprender las características asociadas con la procrastinación académica en que incurre el estudiantado de ingeniería de una universidad privada de Lima" (Duda-Macera y Gallardo-Echenique, 2022, p. 369).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> alta; recoge la voz de estudiantes de Ingeniería de Lima. <strong>Confiabilidad:</strong> media; revista indexada, pero con 10 participantes, por lo que sus resultados no se pueden generalizar. <strong>Aporte:</strong> nos ayudó a definir la dimensión hábitos de estudio (V2) con ejemplos concretos.</p>
+            </details>
+          </li>
+
+          <li class="card" data-ambito="local">
+            <p class="card__top"><span class="badge">Local</span><span class="card__n">10</span></p>
+            <h3>Herquínigo Mendoza (2021)</h3>
+            <dl class="card__meta">
+              <div><dt>Lugar</dt><dd>Universidad Continental, Huancayo, Perú</dd></div>
+              <div><dt>Paradigma</dt><dd>Pospositivista (inferido): contrastan su hipótesis con la correlación de Spearman.</dd></div>
+              <div><dt>Hallazgo</dt><dd>En pregrado predominó el nivel moderado de procrastinación (61 %) y la relación con la autoeficacia fue negativa (rho = −0,253) (Herquínigo Mendoza, 2021).</dd></div>
+            </dl>
+            <details>
+              <summary>Objetivo y valoración crítica</summary>
+              <h4>Objetivo general</h4>
+              <p>"Determinar la relación entre procrastinación académica y autoeficacia general en estudiantes de pregrado y posgrado de una universidad privada de Huancayo" (Herquínigo Mendoza, 2021, p. 19).</p>
+              <h4>Valoración crítica</h4>
+              <p><strong>Pertinencia:</strong> media-alta; es de nuestra misma universidad y ciudad, aunque con estudiantes de otra facultad. <strong>Confiabilidad:</strong> media; tesis de licenciatura con muestreo intencional e instrumentos validados. <strong>Aporte:</strong> nos da una línea base local y respalda incluir la autoeficacia en V1.</p>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Base teórica -->
+    <section id="teoria" aria-labelledby="h-teoria">
+      <div class="wrap">
+        <p class="kicker">Tabla 6 · Teorías por variable</p>
+        <h2 id="h-teoria">Base teórica</h2>
+
+        <div class="theory">
+          <article class="theory__item">
+            <p class="var__tag">V3 · variable principal</p>
+            <h3>Procrastinación académica</h3>
+            <h4>Teoría o modelo</h4>
+            <p>Modelo de la procrastinación como falla de autorregulación. Chenet Zuta et al. (2025) la definen como "una dificultad en los procesos de autorregulación que provoca la demora voluntaria de actividades planificadas" (p. 59). Su origen es multifactorial: la responsabilidad y sus facetas son los rasgos que más se relacionan con ella (Steel y Klingsieck, 2016), y, según la revisión sistemática de Redondo Mendoza (2022), puede deberse a diversos factores.</p>
+            <h4>Fuentes que la sustentan</h4>
+            <p>Steel y Klingsieck (2016); Elizondo et al. (2024); Chenet Zuta et al. (2025); Redondo Mendoza (2022).</p>
+            <h4>Relación con el tema</h4>
+            <p>Define nuestra variable principal y justifica estudiarla junto con factores personales y académicos. La medimos como un solo constructo (postergación académica) con la EPA de 8 ítems validada en universitarios peruanos (Chenet Zuta et al., 2025).</p>
+          </article>
+
+          <article class="theory__item">
+            <p class="var__tag">V1</p>
+            <h3>Factores personales</h3>
+            <h4>Teoría o modelo</h4>
+            <p>Enfoque de la autorregulación y de la autoeficacia académica. Según Elizondo et al. (2024), <span lang="en">"the more self-regulated a student, the less probable they procrastinate"</span> ["cuanto mayor es la autorregulación de un estudiante, menor es la probabilidad de que procrastine", traducción propia] (p. 890). Además, la autoeficacia académica predice menos procrastinación (Datu et al., 2026) y la responsabilidad explica buena parte de sus diferencias (Tsermentseli y Monks, 2026).</p>
+            <h4>Fuentes que la sustentan</h4>
+            <p>Elizondo et al. (2024); Datu et al. (2026); Montilla et al. (2020); Tsermentseli y Monks (2026); Herquínigo Mendoza (2021).</p>
+            <h4>Relación con el tema</h4>
+            <p>Sustenta las dimensiones autorregulación, autoeficacia académica y perfeccionismo (ítems 1 a 8 del cuestionario propio) y la hipótesis de una relación inversa entre los factores protectores y la procrastinación.</p>
+          </article>
+
+          <article class="theory__item">
+            <p class="var__tag">V2</p>
+            <h3>Factores académicos</h3>
+            <h4>Teoría o modelo</h4>
+            <p>Modelo de los entornos de estudio. Svartdal et al. (2020) advierten que el ambiente académico puede resultar <span lang="en">"procrastination friendly"</span> ["propicio para la procrastinación", traducción propia] (p. 1) por el alto grado de libertad, los plazos largos y las distracciones. Este modelo se complementa con la dimensión académica del modelo teórico de la procrastinación universitaria (Araya-Castillo et al., 2023).</p>
+            <h4>Fuentes que la sustentan</h4>
+            <p>Svartdal et al. (2020); Araya-Castillo et al. (2023); Mejia et al. (2018); Duda-Macera y Gallardo-Echenique (2022).</p>
+            <h4>Relación con el tema</h4>
+            <p>Sustenta las dimensiones carga académica, hábitos de estudio y claridad de consignas y plazos (ítems 9 a 16 del cuestionario propio). La relación entre menos horas de estudio y más procrastinación (Mejia et al., 2018) orienta los ítems de hábitos de estudio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Método -->
+    <section id="metodo" aria-labelledby="h-metodo">
+      <div class="wrap">
+        <p class="kicker">Tabla 7 · Tabla comparativa de métodos</p>
+        <h2 id="h-metodo">Método de los antecedentes</h2>
+        <p class="note hint">En pantallas pequeñas, desliza la tabla hacia los lados para ver todas las columnas.</p>
+
+        <div class="table-scroll" role="region" aria-labelledby="cap-metodo" tabindex="0">
+          <table>
+            <caption id="cap-metodo">Comparación del enfoque, el diseño, la técnica, las variables y la muestra de los diez antecedentes</caption>
+            <thead>
+              <tr>
+                <th scope="col">Antecedente (autor, año)</th>
+                <th scope="col">Enfoque y tipo</th>
+                <th scope="col">Alcance y diseño</th>
+                <th scope="col">Técnica e instrumento</th>
+                <th scope="col">Variables y dimensiones</th>
+                <th scope="col">Muestra o participantes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1. Montilla et al. (2020)</th>
+                <td>Cuantitativo; básica (inferido).</td>
+                <td>Descriptivo, correlacional y explicativo; no experimental transversal (inferido).</td>
+                <td>Encuesta; adaptación de la Escala de Procrastinación General y Académica y del PASS (18 ítems; α = 0,803).</td>
+                <td>Procrastinación; factores personales (autorregulación) y externos (tecnología y mecanismo de enseñanza); rendimiento (índice académico).</td>
+                <td>366 estudiantes de Ingeniería de la Universidad Tecnológica de Panamá; muestreo estratificado (Montilla et al., 2020).</td>
+              </tr>
+              <tr>
+                <th scope="row">2. Hidayat y Hasim (2023)</th>
+                <td>Cuantitativo; básica (inferido).</td>
+                <td>Descriptivo; [No registra] el diseño (se infiere no experimental transversal).</td>
+                <td>Encuesta en línea; Academic Procrastination Scale Questionnaire (APSQ) de Solomon y Rothblum, 14 ítems tipo Likert.</td>
+                <td>Procrastinación académica; gestión del tiempo, miedo al fracaso, motivación y distracciones.</td>
+                <td>100 estudiantes de pregrado de inglés como lengua extranjera de una universidad de Indonesia (Hidayat y Hasim, 2023).</td>
+              </tr>
+              <tr>
+                <th scope="row">3. Elizondo et al. (2024)</th>
+                <td>Cuantitativo; básica (inferido).</td>
+                <td>Explicativo (modelo de mediación); no experimental transversal, con ecuaciones estructurales.</td>
+                <td>Encuesta; Spanish Short Self-Regulation Questionnaire (SSSRQ, 17 ítems), Irrational Procrastination Scale (9 ítems) y PASS.</td>
+                <td>Autorregulación (aprender de los errores, fijación de metas, toma de decisiones y perseverancia); procrastinación irracional y académica.</td>
+                <td>433 universitarios chilenos (70,2 % mujeres; edad media de 20,74 años) (Elizondo et al., 2024).</td>
+              </tr>
+              <tr>
+                <th scope="row">4. Mejia et al. (2023)</th>
+                <td>Cuantitativo; analítico.</td>
+                <td>Correlacional (factores asociados); no experimental, transversal y multicéntrico.</td>
+                <td>Encuesta; escala de procrastinación de 12 ítems tipo Likert (α = 0,78); modelos lineales generalizados.</td>
+                <td>Procrastinación académica; tipo de universidad, año de estudios, sexo y carrera.</td>
+                <td>2978 estudiantes de 16 universidades de diez países latinoamericanos (Mejia et al., 2023).</td>
+              </tr>
+              <tr>
+                <th scope="row">5. Johansson et al. (2023)</th>
+                <td>Cuantitativo; observacional.</td>
+                <td>Correlacional-predictivo; cohorte prospectiva con seguimiento de 9 meses.</td>
+                <td>Encuesta; 5 ítems de la Pure Procrastination Scale y medidas de salud.</td>
+                <td>Procrastinación; salud mental (depresión, ansiedad y estrés), dolor, hábitos de vida y factores psicosociales.</td>
+                <td>3525 estudiantes universitarios de Suecia (Johansson et al., 2023).</td>
+              </tr>
+              <tr>
+                <th scope="row">6. Ben Alaya et al. (2021)</th>
+                <td>Cuantitativo; [No precisa] el tipo.</td>
+                <td>Descriptivo; transversal.</td>
+                <td>Encuesta; Academic Procrastination Scale y escalas de impulsividad, perfeccionismo, autoestima y satisfacción con la vida.</td>
+                <td>Procrastinación; rendimiento académico; factores asociados (impulsividad, perfeccionismo y área de estudio).</td>
+                <td>1019 estudiantes de Medicina, Derecho e Ingeniería de Túnez (Ben Alaya et al., 2021).</td>
+              </tr>
+              <tr>
+                <th scope="row">7. Charaña Mamani y Vílchez Julon (2021)</th>
+                <td>Cuantitativo; básica (inferido).</td>
+                <td>Correlacional; no experimental transversal.</td>
+                <td>Encuesta; Escala de Procrastinación Académica (EPA) e inventario BFI-15P.</td>
+                <td>Cinco dimensiones de la personalidad; procrastinación académica.</td>
+                <td>240 estudiantes de cursos online (Psicología, Administración y Contabilidad) de una universidad privada de Tarapoto; muestreo no probabilístico por conveniencia (Charaña Mamani y Vílchez Julon, 2021).</td>
+              </tr>
+              <tr>
+                <th scope="row">8. Urco Cáceres (2019)</th>
+                <td>Cuantitativo; básica (inferido).</td>
+                <td>Descriptivo-correlacional; no experimental transversal.</td>
+                <td>Encuesta; Time Management Behavior Questionnaire (34 ítems) y EPA de Busko (12 ítems).</td>
+                <td>Gestión del tiempo; procrastinación académica.</td>
+                <td>214 estudiantes de la Facultad de Ingeniería (Tarma); muestreo probabilístico estratificado (Urco Cáceres, 2019).</td>
+              </tr>
+              <tr>
+                <th scope="row">9. Duda-Macera y Gallardo-Echenique (2022)</th>
+                <td>Cualitativo; fenomenológico.</td>
+                <td>Exploratorio-comprensivo (inferido); diseño fenomenológico.</td>
+                <td>Entrevista semiestructurada individual; guía de entrevista; análisis temático con Atlas.ti 7.</td>
+                <td>Categorías: hábitos de estudio, gestión del tiempo, uso de la tecnología, emociones y motivación.</td>
+                <td>10 estudiantes de Ingeniería de una universidad privada de Lima (Duda-Macera y Gallardo-Echenique, 2022).</td>
+              </tr>
+              <tr>
+                <th scope="row">10. Herquínigo Mendoza (2021)</th>
+                <td>Cuantitativo; básica (pura).</td>
+                <td>Correlacional; no experimental, correlacional transeccional.</td>
+                <td>Encuesta; Escala de Procrastinación Académica de Busko y Escala de Autoeficacia General de Baessler y Schwarzer.</td>
+                <td>Procrastinación académica; autoeficacia general.</td>
+                <td>210 estudiantes de pregrado de la Facultad de Humanidades y 211 de posgrado (maestrías), matriculados en 2019-II; muestreo no probabilístico intencional (Herquínigo Mendoza, 2021).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Síntesis interpretativa</h3>
+        <p>Al comparar los diez antecedentes, vemos que nueve son cuantitativos y que la mayoría usa diseños no experimentales y transversales de alcance correlacional, con encuestas y escalas tipo Likert, como la EPA de Busko en los estudios peruanos. Las diferencias aparecen en el diseño y en la muestra: Johansson et al. (2023) siguen a una cohorte durante nueve meses, Elizondo et al. (2024) usan ecuaciones estructurales y Duda-Macera y Gallardo-Echenique (2022) entrevistan a estudiantes con un enfoque cualitativo; además, las muestras van de 10 a 3525 participantes. Lo más difícil al sistematizar fue que varios estudios no declaraban su tipo ni su diseño, que dos filas de nuestra matriz repetían la misma fuente y que un antecedente trataba el uso del celular, una variable que ya no forma parte del estudio. Para resolverlo, marcamos como «inferido» lo que los autores no declaraban, revisamos cada dato en el texto completo, eliminamos la fila duplicada y reemplazamos ese antecedente por Elizondo et al. (2024), como registramos en el hito 2 de la bitácora.</p>
+      </div>
+    </section>
+
+    <!-- 7. Proceso -->
+    <section id="proceso" aria-labelledby="h-proceso">
+      <div class="wrap">
+        <p class="kicker">Tablas 8 y 9</p>
+        <h2 id="h-proceso">Proceso del equipo</h2>
+
+        <h3>Bitácora de hitos</h3>
+        <p class="note">Responsables de los tres hitos: Antezana, Campos, Napan, Prudencio y Tornero.</p>
+        <ol class="timeline">
+          <li>
+            <p class="timeline__date"><time datetime="2026-10-28">28/10/2026</time></p>
+            <h4>Hito 1 · Planificación inicial</h4>
+            <dl>
+              <div><dt>Avance</dt><dd>Revisamos las pautas y la rúbrica; distribuimos responsabilidades (Tabla 1), definimos los acuerdos de coordinación y revisión (Tabla 2) y organizamos la carpeta compartida.</dd></div>
+              <div><dt>Obstáculo o riesgo</dt><dd>El borrador partía de una plantilla con un título de otro tema y los documentos previos no coincidían: el PU2 trabajaba tres factores y 24 ítems, y la matriz corregida, dos factores y 16 ítems.</dd></div>
+              <div><dt>Decisión o ajuste</dt><dd>Corregimos la carátula y adoptamos como versión oficial la matriz de consistencia corregida: tres variables (V1, V2 y V3) y cuestionario de 16 ítems.</dd></div>
+              <div><dt>Evidencia</dt><dd>Acta de la reunión por Google Meet del 28/10/2026, con las tareas que asumió cada integrante.</dd></div>
+            </dl>
+          </li>
+          <li>
+            <p class="timeline__date"><time datetime="2026-10-29">29/10/2026</time></p>
+            <h4>Hito 2 · Revisión intermedia</h4>
+            <dl>
+              <div><dt>Avance</dt><dd>Contrastamos las Tablas 3 a 7 con las fuentes originales y con las pautas del docente.</dd></div>
+              <div><dt>Obstáculo o riesgo</dt><dd>La Tabla 5 repetía a Mejia et al. (2023), incluía un antecedente sobre uso del celular que ya no corresponde a nuestras variables y varias citas tenían autoría o páginas por corregir.</dd></div>
+              <div><dt>Decisión o ajuste</dt><dd>Eliminamos la fila duplicada, cambiamos el antecedente sobre el celular por Elizondo et al. (2024), añadimos a Ben Alaya et al. (2021) y comprobamos cada cita en el texto completo de su fuente.</dd></div>
+              <div><dt>Evidencia</dt><dd>Historial de versiones del documento compartido, que muestra los aportes de cada integrante, y fotografía del equipo en la reunión presencial de revisión intermedia.</dd></div>
+            </dl>
+          </li>
+          <li>
+            <p class="timeline__date"><time datetime="2026-10-30">30/10/2026</time></p>
+            <h4>Hito 3 · Cierre</h4>
+            <dl>
+              <div><dt>Avance</dt><dd>Revisión final de citas y referencias (Tabla 12), autoevaluaciones, producto digital y descarga del PDF.</dd></div>
+              <div><dt>Obstáculo o riesgo</dt><dd>Riesgo de que alguna cita no tenga su referencia o de entregar fuera de plazo.</dd></div>
+              <div><dt>Decisión o ajuste</dt><dd>Napan contrasta la Tabla 12 con las demás tablas y Tornero sube el PDF al aula virtual antes del cierre.</dd></div>
+              <div><dt>Evidencia</dt><dd>Constancia de envío del PDF final en el aula virtual.</dd></div>
+            </dl>
+          </li>
+        </ol>
+
+        <h3>Participación de cada integrante</h3>
+        <ul class="share">
+          <li>
+            <div class="share__head"><span class="team__name">Antezana Alonzo Alexandra Dayana</span><span class="share__pct">20 %</span></div>
+            <div class="bar" aria-hidden="true"><span style="width:20%"></span></div>
+            <p>Busqué y organicé las fuentes de los factores personales y el antecedente local, y llevé el acta de las reuniones.</p>
+          </li>
+          <li>
+            <div class="share__head"><span class="team__name">Campos Castañeda Luis Jeffri</span><span class="share__pct">20 %</span></div>
+            <div class="bar" aria-hidden="true"><span style="width:20%"></span></div>
+            <p>Busqué los antecedentes internacionales sobre las consecuencias de la procrastinación y los modelos de V2, y diseñé el producto digital.</p>
+          </li>
+          <li>
+            <div class="share__head"><span class="team__name">Napan Hernandez Luisana Carolina</span><span class="share__pct">20 %</span></div>
+            <div class="bar" aria-hidden="true"><span style="width:20%"></span></div>
+            <p>Busqué los antecedentes nacionales, redacté sus filas y armé el control de citas y referencias (Tabla 12).</p>
+          </li>
+          <li>
+            <div class="share__head"><span class="team__name">Prudencio Rios Denis Wilder</span><span class="share__pct">20 %</span></div>
+            <div class="bar" aria-hidden="true"><span style="width:20%"></span></div>
+            <p>Busqué la definición, la teoría y el instrumento de la procrastinación y redacté esa fila de la Tabla 6.</p>
+          </li>
+          <li>
+            <div class="share__head"><span class="team__name">Tornero Bermúdez Diego Ali Gadiel</span><span class="share__pct">20 %</span></div>
+            <div class="bar" aria-hidden="true"><span style="width:20%"></span></div>
+            <p>Redacté la teoría de los factores académicos (Tabla 6) y la bitácora (Tabla 8), y edité la versión final.</p>
+          </li>
+        </ul>
+        <p class="note">Aporte principal y porcentaje de participación según la Tabla 9 (Autoevaluación individual y participación).</p>
+      </div>
+    </section>
+
+    <!-- 8. Referencias -->
+    <section id="referencias" aria-labelledby="h-referencias">
+      <div class="wrap">
+        <p class="kicker">Tabla 12 · Control de citas y referencias</p>
+        <h2 id="h-referencias">Referencias</h2>
+        <p>Las 18 fuentes citadas, en orden alfabético y según el estilo APA 7.ª edición.</p>
+        <ol class="refs">
+          <li>Araya-Castillo, L., Burgos, M., González, P., Rivera, Y., Barrientos, N., Yáñez Jara, V., Ganga-Contreras, F., &amp; Sáez, W. (2023). Procrastination in university students: A proposal of a theoretical model. <i>Behavioral Sciences, 13</i>(2), Artículo 128. <a href="https://doi.org/10.3390/bs13020128">https://doi.org/10.3390/bs13020128</a></li>
+          <li>Ben Alaya, M., Ouali, U., Ben Youssef, S., Aissa, A., &amp; Nacef, F. (2021). Academic procrastination in university students: Associated factors and impact on academic performance. <i>European Psychiatry, 64</i>(S1), S759–S760. <a href="https://doi.org/10.1192/j.eurpsy.2021.2013">https://doi.org/10.1192/j.eurpsy.2021.2013</a></li>
+          <li>Charaña Mamani, J., &amp; Vílchez Julon, J. (2021). Dimensiones de la personalidad y procrastinación académica en estudiantes de cursos online de una universidad peruana. <i>Apuntes Universitarios, 11</i>(3), 50–65. <a href="https://doi.org/10.17162/au.v11i3.693">https://doi.org/10.17162/au.v11i3.693</a></li>
+          <li>Chenet Zuta, M. E., León Sánchez, R., Montes Domínguez, J. L., Monroy Nasr, Z., &amp; Flores Camacho, F. (2025). Validación y confiabilidad de la Escala de Procrastinación Académica en estudiantes universitarios de Perú. <i>Informes Psicológicos, 25</i>(2), 58–70. <a href="https://doi.org/10.18566/infpsic.v25n2a04">https://doi.org/10.18566/infpsic.v25n2a04</a></li>
+          <li>Datu, J. A. D., Jiahong, Z., &amp; Fincham, F. D. (2026). Is chasing happiness next to academic wellness? Caring for bliss, academic self-efficacy, and academic procrastination in American undergraduate students. <i>Revista de Psicodidáctica (English Ed.), 31</i>(2), Artículo 500188. <a href="https://doi.org/10.1016/j.psicoe.2026.500188">https://doi.org/10.1016/j.psicoe.2026.500188</a></li>
+          <li>Duda-Macera, B., &amp; Gallardo-Echenique, E. (2022). Caracterización de la procrastinación académica en estudiantado universitario peruano. <i>Revista Electrónica Educare, 26</i>(2), 369–385. <a href="https://doi.org/10.15359/ree.26-2.20">https://doi.org/10.15359/ree.26-2.20</a></li>
+          <li>Elizondo, K., Valenzuela, R., Pestana, J. V., &amp; Codina, N. (2024). Self-regulation and procrastination in college students: A tale of motivation, strategy, and perseverance. <i>Psychology in the Schools, 61</i>(3), 887–902. <a href="https://doi.org/10.1002/pits.23088">https://doi.org/10.1002/pits.23088</a></li>
+          <li>Herquínigo Mendoza, G. D. R. (2021). <i>Procrastinación académica y autoeficacia general en estudiantes de pregrado y posgrado de una universidad privada de Huancayo</i> [Tesis de licenciatura, Universidad Continental]. Repositorio Institucional Continental. <a href="https://hdl.handle.net/20.500.12394/11058">https://hdl.handle.net/20.500.12394/11058</a></li>
+          <li>Hidayat, M. T., &amp; Hasim, W. (2023). Putting it off until later: A survey-based study on academic procrastination among undergraduate students. <i>Journal of Educational, Cultural and Psychological Studies</i>, (28), 27–38. <a href="https://doi.org/10.7358/ecps-2023-028-taha">https://doi.org/10.7358/ecps-2023-028-taha</a></li>
+          <li>Johansson, F., Rozental, A., Edlund, K., Côté, P., Sundberg, T., Onell, C., Rudman, A., &amp; Skillgate, E. (2023). Associations between procrastination and subsequent health outcomes among university students in Sweden. <i>JAMA Network Open, 6</i>(1), Artículo e2249346. <a href="https://doi.org/10.1001/jamanetworkopen.2022.49346">https://doi.org/10.1001/jamanetworkopen.2022.49346</a></li>
+          <li>Mejia, C. R., Ruiz-Urbina, F. N., Benites-Gamboa, D., &amp; Pereda-Castro, W. (2018). Factores académicos asociados a la procrastinación. <i>Revista Cubana de Medicina General Integral, 34</i>(3), 62–70. <a href="https://cris.continental.edu.pe/es/publications/factores-acad%C3%A9micos-asociados-a-la-procrastinaci%C3%B3n/">https://cris.continental.edu.pe/es/publications/factores-acad%C3%A9micos-asociados-a-la-procrastinaci%C3%B3n/</a></li>
+          <li>Mejia, C. R., Chacón, J. I., Torres-Riveros, G. S., Wagner-Nitsch, A. M., Loucel-Linares, S. M., Figueroa-Alfaro, E. G., Rojas-Gonzalez, L. D., Duque Sanchez, E., &amp; Corrales-Reyes, I. E. (2023). Factores asociados a la procrastinación académica en estudiantes universitarios de diez países de Latinoamérica. <i>Revista Cubana de Investigaciones Biomédicas, 42</i>, Artículo e1304. <a href="https://revibiomedica.sld.cu/index.php/ibi/article/view/1304">https://revibiomedica.sld.cu/index.php/ibi/article/view/1304</a></li>
+          <li>Montilla, M., Cano, N., Cortés, S., Ortíz, N., &amp; Barría, N. (2020). Factores que promueven la procrastinación y afectan el rendimiento en estudiantes de ingeniería. <i>Revista de Iniciación Científica, 6</i>, 89–94. <a href="https://doi.org/10.33412/rev-ric.v6.0.3135">https://doi.org/10.33412/rev-ric.v6.0.3135</a></li>
+          <li>Redondo Mendoza, C. E. (2022). Factores asociados a la procrastinación académica en estudiantes universitarios. Revisión sistemática. <i>Unaciencia, Revista de Estudios e Investigaciones, 15</i>(28), 63–82. <a href="https://doi.org/10.35997/unaciencia.v15i28.662">https://doi.org/10.35997/unaciencia.v15i28.662</a></li>
+          <li>Steel, P., &amp; Klingsieck, K. B. (2016). Academic procrastination: Psychological antecedents revisited. <i>Australian Psychologist, 51</i>(1), 36–46. <a href="https://doi.org/10.1111/ap.12173">https://doi.org/10.1111/ap.12173</a></li>
+          <li>Svartdal, F., Dahl, T. I., Gamst-Klaussen, T., Koppenborg, M., &amp; Klingsieck, K. B. (2020). How study environments foster academic procrastination: Overview and recommendations. <i>Frontiers in Psychology, 11</i>, Artículo 540910. <a href="https://doi.org/10.3389/fpsyg.2020.540910">https://doi.org/10.3389/fpsyg.2020.540910</a></li>
+          <li>Tsermentseli, S., &amp; Monks, C. P. (2026). Academic procrastination in university students: Conscientiousness and domain-specific executive function associations. <i>Behavioral Sciences, 16</i>(8), Artículo 1368. <a href="https://doi.org/10.3390/bs16081368">https://doi.org/10.3390/bs16081368</a></li>
+          <li>Urco Cáceres, S. A. (2019). <i>Relación entre la gestión del tiempo y procrastinación académica en los estudiantes de la Facultad de Ingeniería de la Universidad Católica Sedes Sapientiae, filial Tarma, 2018</i> [Tesis de maestría, Universidad Peruana de Ciencias e Informática]. Repositorio Institucional UPCI. <a href="https://repositorio.upci.edu.pe/handle/upci/36">https://repositorio.upci.edu.pe/handle/upci/36</a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__title">Producto digital del PU3 · Equipo 07</p>
+      <p>Investigación Académica 2026-20 · NRC 44761 y 44778 · Universidad Continental, Huancayo.</p>
+      <p class="note">Este sitio se elaboró con apoyo de inteligencia artificial; el equipo verificó los datos con el informe final y con las fuentes originales.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
