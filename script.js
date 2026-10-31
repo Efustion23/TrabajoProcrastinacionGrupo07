@@ -37,7 +37,7 @@ function dial(className, full) {
   </svg>`;
 }
 document.querySelector('.brand').insertAdjacentHTML('afterbegin', dial('dial dial--mini', false));
-document.getElementById('titulo').insertAdjacentHTML('afterend', dial('dial dial--hero', true));
+document.querySelector('.cover__art').insertAdjacentHTML('beforeend', dial('dial dial--hero', true));
 
 // Modo claro u oscuro, recordado en este navegador
 const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -148,3 +148,63 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main > section[id]').forEach((s) => observer.observe(s));
+
+// Aparición suave al llegar a cada bloque; las cifras cuentan, los pictogramas se encienden y las barras crecen.
+// Con "reducir movimiento" (o sin IntersectionObserver) todo se ve de entrada.
+if (!reduceMotion.matches && 'IntersectionObserver' in window) {
+  root.classList.add('anim');
+  const revealSel = [
+    'main > section:not(.cover) .kicker', 'main > section:not(.cover) h2', '.quote', '.define p', '.que-es__art',
+    '.stats li', '.stats__legend', '.aside', '.factor', '.map', '.insights li', '.chart', 'details.more',
+    '.recos li', '.team li', '.credits'
+  ].join(',');
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      reveal.unobserve(e.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll(revealSel).forEach((el) => {
+    const sibling = el.parentElement.querySelectorAll(':scope > ' + el.tagName.toLowerCase());
+    el.style.setProperty('--d', Math.min([...sibling].indexOf(el), 4));
+    el.classList.add('reveal');
+    reveal.observe(el);
+  });
+
+  // Pictogramas y gráfico: se "encienden" al aparecer
+  const lights = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      lights.unobserve(e.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.pict, .chart').forEach((el) => lights.observe(el));
+
+  // Cifras: cuentan desde cero hasta su valor (el valor final queda en el texto para lectores de pantalla)
+  const counter = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      counter.unobserve(e.target);
+      const el = e.target;
+      const m = el.textContent.trim().match(/^(\d+(?:,\d+)?)\s*%$/);
+      if (!m) return;
+      const final = el.textContent.trim();
+      const target = parseFloat(m[1].replace(',', '.'));
+      const decimals = m[1].includes(',') ? m[1].split(',')[1].length : 0;
+      el.innerHTML = '<span class="sr-only"></span><span aria-hidden="true"></span>';
+      el.firstChild.textContent = final;
+      const live = el.lastChild;
+      const t0 = performance.now();
+      const dur = 1400;
+      (function tick(now) {
+        const k = Math.min(1, (now - t0) / dur);
+        const v = target * (1 - Math.pow(1 - k, 3));
+        live.textContent = v.toFixed(decimals).replace('.', ',') + ' %';
+        if (k < 1) requestAnimationFrame(tick); else live.textContent = final;
+      })(t0);
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat__num:not(.stat__num--text)').forEach((el) => counter.observe(el));
+}
