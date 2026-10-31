@@ -6,23 +6,22 @@
   <title>¿Por qué dejamos todo para el último momento? · Procrastinación académica en Ingeniería</title>
   <meta name="description" content="Qué dice la evidencia sobre por qué los universitarios postergan sus tareas y qué factores personales y académicos se relacionan con ello.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#20242e">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
   <meta property="og:title" content="¿Por qué dejamos todo para el último momento?">
   <meta property="og:description" content="Qué es la procrastinación académica, qué tan frecuente es en universitarios y qué factores personales y académicos se relacionan con ella.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Spectral+SC:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=05738dfd">
+  <link rel="preload" href="fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=646de259">
   <script>try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <symbol id="pp" viewBox="0 0 10 14"><circle cx="5" cy="3" r="2.6"/><path d="M.8 13.6c0-4 1.9-6 4.2-6s4.2 2 4.2 6z"/></symbol>
-    <linearGradient id="gp-82" x1="0" x2="1" y1="0" y2="0"><stop offset=".4" style="stop-color:var(--brass)"/><stop offset=".4" style="stop-color:var(--border)"/></linearGradient>
-  </defs>
-</svg>
+    <defs>
+      <symbol id="pp" viewBox="0 0 10 14"><circle cx="5" cy="3" r="2.6"/><path d="M.8 13.6c0-4 1.9-6 4.2-6s4.2 2 4.2 6z"/></symbol>
+      <linearGradient id="gp-part" x1="0" x2="1" y1="0" y2="0"><stop offset=".4" stop-color="#f2b705"/><stop offset=".4" stop-color="#454b59"/></linearGradient>
+    </defs>
+  </svg>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
   <header class="topbar">
@@ -36,10 +35,12 @@
         <ul>
           <li><a href="#que-es">Qué es</a></li>
           <li><a href="#cifras">Cifras</a></li>
+          <li><a href="#ingenieria">Ingeniería</a></li>
           <li><a href="#factores">Factores</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+          <li><a href="#recomendaciones">Recomendaciones</a></li>
           <li><a href="#mito-realidad">Mito o realidad</a></li>
           <li><a href="#estudios">Estudios</a></li>
-          <li><a href="#recomendaciones">Recomendaciones</a></li>
           <li><a href="#equipo">Equipo</a></li>
         </ul>
       </nav>
@@ -48,159 +49,135 @@
 
   <main id="contenido">
 
-    <!-- 4.1 Portada -->
     <section id="portada" class="cover" aria-labelledby="titulo">
-      <div class="wrap">
-        <img class="cover__logo" src="img/logo-continental.jpg" width="337" height="92" alt="Logotipo de la Universidad Continental">
-        <p class="cover__inst">Facultad de Ingeniería<br>E.A.P. Ingeniería de Sistemas e Informática</p>
-        <h1 id="titulo">¿Por qué dejamos todo para el último momento?</h1>
-        <p class="cover__lede">Qué dice la evidencia sobre por qué los universitarios postergan sus tareas y qué factores personales y académicos se relacionan con ello.</p>
-        <p class="cover__cta"><a class="btn" href="#que-es">Descubre por qué</a></p>
-        <div class="cover__art" aria-hidden="true">
-<svg class="il" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
-  <circle class="il-soft" cx="210" cy="210" r="192"/>
-  <circle class="il-dash" cx="210" cy="210" r="203"/>
-  <g transform="translate(282 22) rotate(7)">
-    <rect class="il-paper il-st" x="0" y="0" width="112" height="124" rx="6"/>
-    <path class="il-rust" d="M0 6a6 6 0 0 1 6-6h100a6 6 0 0 1 6 6v24H0z"/>
-    <path class="il-ln" d="M28 -8v14M84 -8v14"/>
-    <rect class="il-paper il-st" x="10" y="44" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M14 48l11 9M25 48l-11 9"/><rect class="il-paper il-st" x="35" y="44" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M39 48l11 9M50 48l-11 9"/><rect class="il-paper il-st" x="60" y="44" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M64 48l11 9M75 48l-11 9"/><rect class="il-paper il-st" x="85" y="44" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M89 48l11 9M100 48l-11 9"/><rect class="il-paper il-st" x="10" y="68" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M14 72l11 9M25 72l-11 9"/><rect class="il-paper il-st" x="35" y="68" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M39 72l11 9M50 72l-11 9"/><rect class="il-paper il-st" x="60" y="68" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M64 72l11 9M75 72l-11 9"/><rect class="il-paper il-st" x="85" y="68" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M89 72l11 9M100 72l-11 9"/><rect class="il-paper il-st" x="10" y="92" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M14 96l11 9M25 96l-11 9"/><rect class="il-paper il-st" x="35" y="92" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M39 96l11 9M50 96l-11 9"/><rect class="il-paper il-st" x="60" y="92" width="19" height="17" rx="2" style="stroke-width:1.5"/><path class="il-x" d="M64 96l11 9M75 96l-11 9"/><rect class="il-paper il-st" x="85" y="92" width="19" height="17" rx="2" style="stroke-width:1.5"/>
-    <circle class="il-ring" cx="97.5" cy="108.5" r="14"/>
-  </g>
-  <g transform="translate(12 300)">
-    <rect class="il-acc il-st" x="0" y="52" width="126" height="25" rx="3"/>
-    <path class="il-spine" d="M16 56v17M108 56v17"/>
-    <rect class="il-brass il-st" x="12" y="27" width="108" height="25" rx="3"/>
-    <path class="il-spine" d="M28 31v17M96 31v17"/>
-    <rect class="il-rust il-st" x="5" y="2" width="114" height="25" rx="3" transform="rotate(-3 62 14)"/>
-    <path class="il-spine" d="M22 7v17M100 6v17" transform="rotate(-3 62 14)"/>
-  </g>
-  <g transform="translate(306 318)">
-    <path class="il-steam" d="M16 -4c-7-9 7-13 0-22M34 -4c-7-9 7-13 0-22M52 -4c-7-9 7-13 0-22"/>
-    <path class="il-paper il-st" d="M0 8h68v28a26 26 0 0 1-26 26H26A26 26 0 0 1 0 36z"/>
-    <path class="il-ln" d="M68 18h8a12 12 0 0 1 0 28h-9"/>
-    <ellipse class="il-brass il-st" cx="34" cy="66" rx="50" ry="7"/>
-  </g>
-  <g transform="translate(14 86) rotate(-38)">
-    <rect class="il-rust il-st" x="-13" y="0" width="13" height="16" rx="3"/>
-    <rect class="il-brass il-st" x="0" y="0" width="90" height="16" rx="2"/>
-    <path class="il-paper il-st" d="M90 0l22 8-22 8z"/>
-    <path class="il-st" d="M104 5l8 3-8 3z" style="fill:var(--text)"/>
-  </g>
-  <path class="il-spark" d="M56 40l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
-  <path class="il-spark" d="M372 182l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
-  <circle class="il-spark" cx="150" cy="44" r="4"/><circle class="il-spark" cx="394" cy="262" r="5"/><circle class="il-spark" cx="30" cy="236" r="4"/>
-</svg>
+      <div class="wrap cover__grid">
+        <div class="cover__text">
+          <p class="cover__plate"><img class="cover__logo" src="img/logo-continental.jpg" width="337" height="92" alt="Logotipo de la Universidad Continental"></p>
+          <p class="cover__inst">Facultad de Ingeniería<br>E.A.P. Ingeniería de Sistemas e Informática</p>
+          <h1 id="titulo">¿Por qué dejamos todo para el último momento?</h1>
+          <p class="cover__lede">Qué dice la evidencia sobre por qué los universitarios postergan sus tareas y qué factores personales y académicos se relacionan con ello.</p>
+          <p class="cover__cta"><a class="btn" href="#que-es">Descubre por qué</a></p>
+        </div>
+        <div class="board" aria-hidden="true">
+          <div class="board__top">
+            <p class="board__title">Pendientes</p>
+            <p class="board__clock"><span class="board__time">23:59</span></p>
+          </div>
+          <div class="board__head"><span>Tarea</span><span>Estado</span></div>
+          <ul class="board__rows">
+<li class="board__row"><span class="board__task">Informe de laboratorio</span><span class="flaps" data-text="RETRASADO">RETRASADO</span></li>
+<li class="board__row"><span class="board__task">Estudiar para el parcial</span><span class="flaps" data-text="MAÑANA">MAÑANA</span></li>
+<li class="board__row"><span class="board__task">Avance del proyecto</span><span class="flaps" data-text="ÚLTIMA HORA">ÚLTIMA HORA</span></li>
+<li class="board__row"><span class="board__task">Leer el capítulo 3</span><span class="flaps" data-text="POSTERGADO">POSTERGADO</span></li>
+          </ul>
+          <p class="board__foot">Próxima entrega: siempre mañana</p>
         </div>
       </div>
     </section>
 
-    <!-- 4.2 Qué es -->
     <section id="que-es" aria-labelledby="h-que-es">
       <div class="wrap que-es">
-        <div class="que-es__text">
-        <p class="kicker">Primero, la definición</p>
         <h2 id="h-que-es">¿Qué es la procrastinación académica?</h2>
-        <blockquote class="quote">
-          <p>Chenet Zuta et al. (2025) la definen como «una dificultad en los procesos de autorregulación que provoca la demora voluntaria de actividades planificadas» (p. 59).</p>
-        </blockquote>
+        <article class="dict">
+          <p class="dict__word">pro·cras·ti·na·ción <span class="dict__pos">f.</span></p>
+          <blockquote class="dict__def">
+            <p>«Una dificultad en los procesos de autorregulación que provoca la demora voluntaria de actividades planificadas».</p>
+            <footer>Chenet Zuta et al. (2025, p. 59)</footer>
+          </blockquote>
+        </article>
         <div class="define">
           <p>Se trata de postergar por decisión propia algo que ya estaba planificado. Por eso la entendemos como una <strong>falla de autorregulación</strong> y no como un simple problema de tiempo.</p>
           <p>No tiene <strong>una sola causa</strong>: puede deberse a diversos factores (Redondo Mendoza, 2022).</p>
         </div>
-        </div>
-        <div class="que-es__art" aria-hidden="true">
-<svg class="il" viewBox="0 0 260 320" aria-hidden="true" focusable="false">
-  <circle class="il-soft" cx="130" cy="160" r="124"/>
-  <ellipse class="il-soft" cx="130" cy="298" rx="112" ry="13" style="opacity:.8"/>
-  <rect class="il-rust il-st" x="50" y="28" width="160" height="17" rx="4"/>
-  <rect class="il-rust il-st" x="50" y="275" width="160" height="17" rx="4"/>
-  <path class="il-ln" d="M64 45v230M196 45v230"/>
-  <path class="il-glass il-st" d="M78 45h104c0 62-40 84-40 115s40 53 40 115H78c0-62 40-84 40-115S78 107 78 45Z"/>
-  <path class="il-brass" d="M92 62h76c-6 28-26 44-34 60h-8C118 106 98 90 92 62Z"/>
-  <path class="il-steam" d="M130 126v112" style="stroke-dasharray:2 6"/>
-  <path class="il-brass" d="M94 272c9-22 26-36 36-36s27 14 36 36z"/>
-  <g transform="translate(152 186) rotate(6)">
-    <rect class="il-paper il-st" x="0" y="0" width="92" height="104" rx="5"/>
-    <path class="il-rust" d="M0 5a5 5 0 0 1 5-5h82a5 5 0 0 1 5 5v14H0z"/>
-    <rect class="il-paper il-st" x="12" y="34" width="13" height="13" rx="2"/><path class="il-ln" d="m14.5 40.5 3.5 3.5 6-7" style="stroke:var(--accent)"/><path class="il-ln" d="M34 41h46" style="stroke:var(--border)"/>
-    <rect class="il-paper il-st" x="12" y="58" width="13" height="13" rx="2"/><path class="il-ln" d="m14.5 64.5 3.5 3.5 6-7" style="stroke:var(--accent)"/><path class="il-ln" d="M34 65h46" style="stroke:var(--border)"/>
-    <rect class="il-paper" x="12" y="82" width="13" height="13" rx="2" style="stroke:var(--rust);stroke-width:2.5;stroke-dasharray:3 3"/><path class="il-ln" d="M34 89h34" style="stroke:var(--border)"/>
-  </g>
-</svg>
-        </div>
       </div>
     </section>
 
-    <!-- 4.3 Cifras -->
     <section id="cifras" aria-labelledby="h-cifras">
       <div class="wrap">
-        <p class="kicker">Un problema frecuente</p>
         <h2 id="h-cifras">El problema en cifras</h2>
-
-        <ul class="stats">
-          <li>
-            <p class="stat__num stat__num--text">Al menos la mitad</p>
+        <ul class="tickets">
+          <li class="ticket">
+            <p class="ticket__num ticket__num--text">Al menos la mitad</p>
             <div class="pict" aria-hidden="true"><svg class="pict__svg" viewBox="0 0 200 70" focusable="false"><use class="pp on" href="#pp" x="0.5" y="0" width="9" height="12.6" style="--i:0"/><use class="pp on" href="#pp" x="10.5" y="0" width="9" height="12.6" style="--i:1"/><use class="pp on" href="#pp" x="20.5" y="0" width="9" height="12.6" style="--i:2"/><use class="pp on" href="#pp" x="30.5" y="0" width="9" height="12.6" style="--i:3"/><use class="pp on" href="#pp" x="40.5" y="0" width="9" height="12.6" style="--i:4"/><use class="pp on" href="#pp" x="50.5" y="0" width="9" height="12.6" style="--i:5"/><use class="pp on" href="#pp" x="60.5" y="0" width="9" height="12.6" style="--i:6"/><use class="pp on" href="#pp" x="70.5" y="0" width="9" height="12.6" style="--i:7"/><use class="pp on" href="#pp" x="80.5" y="0" width="9" height="12.6" style="--i:8"/><use class="pp on" href="#pp" x="90.5" y="0" width="9" height="12.6" style="--i:9"/><use class="pp on" href="#pp" x="100.5" y="0" width="9" height="12.6" style="--i:10"/><use class="pp on" href="#pp" x="110.5" y="0" width="9" height="12.6" style="--i:11"/><use class="pp on" href="#pp" x="120.5" y="0" width="9" height="12.6" style="--i:12"/><use class="pp on" href="#pp" x="130.5" y="0" width="9" height="12.6" style="--i:13"/><use class="pp on" href="#pp" x="140.5" y="0" width="9" height="12.6" style="--i:14"/><use class="pp on" href="#pp" x="150.5" y="0" width="9" height="12.6" style="--i:15"/><use class="pp on" href="#pp" x="160.5" y="0" width="9" height="12.6" style="--i:16"/><use class="pp on" href="#pp" x="170.5" y="0" width="9" height="12.6" style="--i:17"/><use class="pp on" href="#pp" x="180.5" y="0" width="9" height="12.6" style="--i:18"/><use class="pp on" href="#pp" x="190.5" y="0" width="9" height="12.6" style="--i:19"/><use class="pp on" href="#pp" x="0.5" y="14" width="9" height="12.6" style="--i:20"/><use class="pp on" href="#pp" x="10.5" y="14" width="9" height="12.6" style="--i:21"/><use class="pp on" href="#pp" x="20.5" y="14" width="9" height="12.6" style="--i:22"/><use class="pp on" href="#pp" x="30.5" y="14" width="9" height="12.6" style="--i:23"/><use class="pp on" href="#pp" x="40.5" y="14" width="9" height="12.6" style="--i:24"/><use class="pp on" href="#pp" x="50.5" y="14" width="9" height="12.6" style="--i:25"/><use class="pp on" href="#pp" x="60.5" y="14" width="9" height="12.6" style="--i:26"/><use class="pp on" href="#pp" x="70.5" y="14" width="9" height="12.6" style="--i:27"/><use class="pp on" href="#pp" x="80.5" y="14" width="9" height="12.6" style="--i:28"/><use class="pp on" href="#pp" x="90.5" y="14" width="9" height="12.6" style="--i:29"/><use class="pp on" href="#pp" x="100.5" y="14" width="9" height="12.6" style="--i:30"/><use class="pp on" href="#pp" x="110.5" y="14" width="9" height="12.6" style="--i:31"/><use class="pp on" href="#pp" x="120.5" y="14" width="9" height="12.6" style="--i:32"/><use class="pp on" href="#pp" x="130.5" y="14" width="9" height="12.6" style="--i:33"/><use class="pp on" href="#pp" x="140.5" y="14" width="9" height="12.6" style="--i:34"/><use class="pp on" href="#pp" x="150.5" y="14" width="9" height="12.6" style="--i:35"/><use class="pp on" href="#pp" x="160.5" y="14" width="9" height="12.6" style="--i:36"/><use class="pp on" href="#pp" x="170.5" y="14" width="9" height="12.6" style="--i:37"/><use class="pp on" href="#pp" x="180.5" y="14" width="9" height="12.6" style="--i:38"/><use class="pp on" href="#pp" x="190.5" y="14" width="9" height="12.6" style="--i:39"/><use class="pp on" href="#pp" x="0.5" y="28" width="9" height="12.6" style="--i:40"/><use class="pp on" href="#pp" x="10.5" y="28" width="9" height="12.6" style="--i:41"/><use class="pp on" href="#pp" x="20.5" y="28" width="9" height="12.6" style="--i:42"/><use class="pp on" href="#pp" x="30.5" y="28" width="9" height="12.6" style="--i:43"/><use class="pp on" href="#pp" x="40.5" y="28" width="9" height="12.6" style="--i:44"/><use class="pp on" href="#pp" x="50.5" y="28" width="9" height="12.6" style="--i:45"/><use class="pp on" href="#pp" x="60.5" y="28" width="9" height="12.6" style="--i:46"/><use class="pp on" href="#pp" x="70.5" y="28" width="9" height="12.6" style="--i:47"/><use class="pp on" href="#pp" x="80.5" y="28" width="9" height="12.6" style="--i:48"/><use class="pp on" href="#pp" x="90.5" y="28" width="9" height="12.6" style="--i:49"/><use class="pp" href="#pp" x="100.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="0.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="10.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="0.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="10.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="56" width="9" height="12.6"/></svg></div>
-            <p class="stat__txt">de los universitarios posterga de forma habitual tareas importantes para ellos.</p>
-            <p class="stat__cite">(Svartdal et al., 2020)</p>
+            <p class="ticket__txt">de los universitarios posterga de forma habitual tareas importantes para ellos.</p>
+            <p class="ticket__cite">(Svartdal et al., 2020)</p>
           </li>
-          <li>
-            <p class="stat__num">52 %</p>
+          <li class="ticket">
+            <p class="ticket__num ticket__num--text">El doble o el triple</p>
+            <div class="compare" aria-hidden="true">
+              <div class="compare__row"><span class="compare__lab">Población que trabaja</span><svg viewBox="0 0 60 14" focusable="false"><use class="pp on" href="#pp" x="0" y="0" width="10" height="14"/></svg></div>
+              <div class="compare__row"><span class="compare__lab">Estudiantes</span><svg viewBox="0 0 60 14" focusable="false"><use class="pp on" href="#pp" x="0" y="0" width="10" height="14"/><use class="pp on" href="#pp" x="13" y="0" width="10" height="14"/><use class="pp pp--maybe" href="#pp" x="26" y="0" width="10" height="14"/></svg></div>
+            </div>
+            <p class="ticket__txt">es la frecuencia estimada de la procrastinación en estudiantes frente a la de la población que trabaja.</p>
+            <p class="ticket__cite">(Svartdal et al., 2020)</p>
+          </li>
+          <li class="ticket">
+            <p class="ticket__num">52 %</p>
             <div class="pict" aria-hidden="true"><svg class="pict__svg" viewBox="0 0 200 70" focusable="false"><use class="pp on" href="#pp" x="0.5" y="0" width="9" height="12.6" style="--i:0"/><use class="pp on" href="#pp" x="10.5" y="0" width="9" height="12.6" style="--i:1"/><use class="pp on" href="#pp" x="20.5" y="0" width="9" height="12.6" style="--i:2"/><use class="pp on" href="#pp" x="30.5" y="0" width="9" height="12.6" style="--i:3"/><use class="pp on" href="#pp" x="40.5" y="0" width="9" height="12.6" style="--i:4"/><use class="pp on" href="#pp" x="50.5" y="0" width="9" height="12.6" style="--i:5"/><use class="pp on" href="#pp" x="60.5" y="0" width="9" height="12.6" style="--i:6"/><use class="pp on" href="#pp" x="70.5" y="0" width="9" height="12.6" style="--i:7"/><use class="pp on" href="#pp" x="80.5" y="0" width="9" height="12.6" style="--i:8"/><use class="pp on" href="#pp" x="90.5" y="0" width="9" height="12.6" style="--i:9"/><use class="pp on" href="#pp" x="100.5" y="0" width="9" height="12.6" style="--i:10"/><use class="pp on" href="#pp" x="110.5" y="0" width="9" height="12.6" style="--i:11"/><use class="pp on" href="#pp" x="120.5" y="0" width="9" height="12.6" style="--i:12"/><use class="pp on" href="#pp" x="130.5" y="0" width="9" height="12.6" style="--i:13"/><use class="pp on" href="#pp" x="140.5" y="0" width="9" height="12.6" style="--i:14"/><use class="pp on" href="#pp" x="150.5" y="0" width="9" height="12.6" style="--i:15"/><use class="pp on" href="#pp" x="160.5" y="0" width="9" height="12.6" style="--i:16"/><use class="pp on" href="#pp" x="170.5" y="0" width="9" height="12.6" style="--i:17"/><use class="pp on" href="#pp" x="180.5" y="0" width="9" height="12.6" style="--i:18"/><use class="pp on" href="#pp" x="190.5" y="0" width="9" height="12.6" style="--i:19"/><use class="pp on" href="#pp" x="0.5" y="14" width="9" height="12.6" style="--i:20"/><use class="pp on" href="#pp" x="10.5" y="14" width="9" height="12.6" style="--i:21"/><use class="pp on" href="#pp" x="20.5" y="14" width="9" height="12.6" style="--i:22"/><use class="pp on" href="#pp" x="30.5" y="14" width="9" height="12.6" style="--i:23"/><use class="pp on" href="#pp" x="40.5" y="14" width="9" height="12.6" style="--i:24"/><use class="pp on" href="#pp" x="50.5" y="14" width="9" height="12.6" style="--i:25"/><use class="pp on" href="#pp" x="60.5" y="14" width="9" height="12.6" style="--i:26"/><use class="pp on" href="#pp" x="70.5" y="14" width="9" height="12.6" style="--i:27"/><use class="pp on" href="#pp" x="80.5" y="14" width="9" height="12.6" style="--i:28"/><use class="pp on" href="#pp" x="90.5" y="14" width="9" height="12.6" style="--i:29"/><use class="pp on" href="#pp" x="100.5" y="14" width="9" height="12.6" style="--i:30"/><use class="pp on" href="#pp" x="110.5" y="14" width="9" height="12.6" style="--i:31"/><use class="pp on" href="#pp" x="120.5" y="14" width="9" height="12.6" style="--i:32"/><use class="pp on" href="#pp" x="130.5" y="14" width="9" height="12.6" style="--i:33"/><use class="pp on" href="#pp" x="140.5" y="14" width="9" height="12.6" style="--i:34"/><use class="pp on" href="#pp" x="150.5" y="14" width="9" height="12.6" style="--i:35"/><use class="pp on" href="#pp" x="160.5" y="14" width="9" height="12.6" style="--i:36"/><use class="pp on" href="#pp" x="170.5" y="14" width="9" height="12.6" style="--i:37"/><use class="pp on" href="#pp" x="180.5" y="14" width="9" height="12.6" style="--i:38"/><use class="pp on" href="#pp" x="190.5" y="14" width="9" height="12.6" style="--i:39"/><use class="pp on" href="#pp" x="0.5" y="28" width="9" height="12.6" style="--i:40"/><use class="pp on" href="#pp" x="10.5" y="28" width="9" height="12.6" style="--i:41"/><use class="pp on" href="#pp" x="20.5" y="28" width="9" height="12.6" style="--i:42"/><use class="pp on" href="#pp" x="30.5" y="28" width="9" height="12.6" style="--i:43"/><use class="pp on" href="#pp" x="40.5" y="28" width="9" height="12.6" style="--i:44"/><use class="pp on" href="#pp" x="50.5" y="28" width="9" height="12.6" style="--i:45"/><use class="pp on" href="#pp" x="60.5" y="28" width="9" height="12.6" style="--i:46"/><use class="pp on" href="#pp" x="70.5" y="28" width="9" height="12.6" style="--i:47"/><use class="pp on" href="#pp" x="80.5" y="28" width="9" height="12.6" style="--i:48"/><use class="pp on" href="#pp" x="90.5" y="28" width="9" height="12.6" style="--i:49"/><use class="pp on" href="#pp" x="100.5" y="28" width="9" height="12.6" style="--i:50"/><use class="pp on" href="#pp" x="110.5" y="28" width="9" height="12.6" style="--i:51"/><use class="pp" href="#pp" x="120.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="28" width="9" height="12.6"/><use class="pp" href="#pp" x="0.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="10.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="0.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="10.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="56" width="9" height="12.6"/></svg></div>
-            <p class="stat__txt">de los estudiantes encuestados admitió procrastinar con frecuencia.</p>
-            <p class="stat__cite">(Hidayat y Hasim, 2023)</p>
+            <p class="ticket__txt">de los estudiantes encuestados admitió procrastinar con frecuencia.</p>
+            <p class="ticket__cite">(Hidayat y Hasim, 2023)</p>
           </li>
-          <li>
-            <p class="stat__num">82,4 %</p>
-            <div class="pict" aria-hidden="true"><svg class="pict__svg" viewBox="0 0 200 70" focusable="false"><use class="pp on" href="#pp" x="0.5" y="0" width="9" height="12.6" style="--i:0"/><use class="pp on" href="#pp" x="10.5" y="0" width="9" height="12.6" style="--i:1"/><use class="pp on" href="#pp" x="20.5" y="0" width="9" height="12.6" style="--i:2"/><use class="pp on" href="#pp" x="30.5" y="0" width="9" height="12.6" style="--i:3"/><use class="pp on" href="#pp" x="40.5" y="0" width="9" height="12.6" style="--i:4"/><use class="pp on" href="#pp" x="50.5" y="0" width="9" height="12.6" style="--i:5"/><use class="pp on" href="#pp" x="60.5" y="0" width="9" height="12.6" style="--i:6"/><use class="pp on" href="#pp" x="70.5" y="0" width="9" height="12.6" style="--i:7"/><use class="pp on" href="#pp" x="80.5" y="0" width="9" height="12.6" style="--i:8"/><use class="pp on" href="#pp" x="90.5" y="0" width="9" height="12.6" style="--i:9"/><use class="pp on" href="#pp" x="100.5" y="0" width="9" height="12.6" style="--i:10"/><use class="pp on" href="#pp" x="110.5" y="0" width="9" height="12.6" style="--i:11"/><use class="pp on" href="#pp" x="120.5" y="0" width="9" height="12.6" style="--i:12"/><use class="pp on" href="#pp" x="130.5" y="0" width="9" height="12.6" style="--i:13"/><use class="pp on" href="#pp" x="140.5" y="0" width="9" height="12.6" style="--i:14"/><use class="pp on" href="#pp" x="150.5" y="0" width="9" height="12.6" style="--i:15"/><use class="pp on" href="#pp" x="160.5" y="0" width="9" height="12.6" style="--i:16"/><use class="pp on" href="#pp" x="170.5" y="0" width="9" height="12.6" style="--i:17"/><use class="pp on" href="#pp" x="180.5" y="0" width="9" height="12.6" style="--i:18"/><use class="pp on" href="#pp" x="190.5" y="0" width="9" height="12.6" style="--i:19"/><use class="pp on" href="#pp" x="0.5" y="14" width="9" height="12.6" style="--i:20"/><use class="pp on" href="#pp" x="10.5" y="14" width="9" height="12.6" style="--i:21"/><use class="pp on" href="#pp" x="20.5" y="14" width="9" height="12.6" style="--i:22"/><use class="pp on" href="#pp" x="30.5" y="14" width="9" height="12.6" style="--i:23"/><use class="pp on" href="#pp" x="40.5" y="14" width="9" height="12.6" style="--i:24"/><use class="pp on" href="#pp" x="50.5" y="14" width="9" height="12.6" style="--i:25"/><use class="pp on" href="#pp" x="60.5" y="14" width="9" height="12.6" style="--i:26"/><use class="pp on" href="#pp" x="70.5" y="14" width="9" height="12.6" style="--i:27"/><use class="pp on" href="#pp" x="80.5" y="14" width="9" height="12.6" style="--i:28"/><use class="pp on" href="#pp" x="90.5" y="14" width="9" height="12.6" style="--i:29"/><use class="pp on" href="#pp" x="100.5" y="14" width="9" height="12.6" style="--i:30"/><use class="pp on" href="#pp" x="110.5" y="14" width="9" height="12.6" style="--i:31"/><use class="pp on" href="#pp" x="120.5" y="14" width="9" height="12.6" style="--i:32"/><use class="pp on" href="#pp" x="130.5" y="14" width="9" height="12.6" style="--i:33"/><use class="pp on" href="#pp" x="140.5" y="14" width="9" height="12.6" style="--i:34"/><use class="pp on" href="#pp" x="150.5" y="14" width="9" height="12.6" style="--i:35"/><use class="pp on" href="#pp" x="160.5" y="14" width="9" height="12.6" style="--i:36"/><use class="pp on" href="#pp" x="170.5" y="14" width="9" height="12.6" style="--i:37"/><use class="pp on" href="#pp" x="180.5" y="14" width="9" height="12.6" style="--i:38"/><use class="pp on" href="#pp" x="190.5" y="14" width="9" height="12.6" style="--i:39"/><use class="pp on" href="#pp" x="0.5" y="28" width="9" height="12.6" style="--i:40"/><use class="pp on" href="#pp" x="10.5" y="28" width="9" height="12.6" style="--i:41"/><use class="pp on" href="#pp" x="20.5" y="28" width="9" height="12.6" style="--i:42"/><use class="pp on" href="#pp" x="30.5" y="28" width="9" height="12.6" style="--i:43"/><use class="pp on" href="#pp" x="40.5" y="28" width="9" height="12.6" style="--i:44"/><use class="pp on" href="#pp" x="50.5" y="28" width="9" height="12.6" style="--i:45"/><use class="pp on" href="#pp" x="60.5" y="28" width="9" height="12.6" style="--i:46"/><use class="pp on" href="#pp" x="70.5" y="28" width="9" height="12.6" style="--i:47"/><use class="pp on" href="#pp" x="80.5" y="28" width="9" height="12.6" style="--i:48"/><use class="pp on" href="#pp" x="90.5" y="28" width="9" height="12.6" style="--i:49"/><use class="pp on" href="#pp" x="100.5" y="28" width="9" height="12.6" style="--i:50"/><use class="pp on" href="#pp" x="110.5" y="28" width="9" height="12.6" style="--i:51"/><use class="pp on" href="#pp" x="120.5" y="28" width="9" height="12.6" style="--i:52"/><use class="pp on" href="#pp" x="130.5" y="28" width="9" height="12.6" style="--i:53"/><use class="pp on" href="#pp" x="140.5" y="28" width="9" height="12.6" style="--i:54"/><use class="pp on" href="#pp" x="150.5" y="28" width="9" height="12.6" style="--i:55"/><use class="pp on" href="#pp" x="160.5" y="28" width="9" height="12.6" style="--i:56"/><use class="pp on" href="#pp" x="170.5" y="28" width="9" height="12.6" style="--i:57"/><use class="pp on" href="#pp" x="180.5" y="28" width="9" height="12.6" style="--i:58"/><use class="pp on" href="#pp" x="190.5" y="28" width="9" height="12.6" style="--i:59"/><use class="pp on" href="#pp" x="0.5" y="42" width="9" height="12.6" style="--i:60"/><use class="pp on" href="#pp" x="10.5" y="42" width="9" height="12.6" style="--i:61"/><use class="pp on" href="#pp" x="20.5" y="42" width="9" height="12.6" style="--i:62"/><use class="pp on" href="#pp" x="30.5" y="42" width="9" height="12.6" style="--i:63"/><use class="pp on" href="#pp" x="40.5" y="42" width="9" height="12.6" style="--i:64"/><use class="pp on" href="#pp" x="50.5" y="42" width="9" height="12.6" style="--i:65"/><use class="pp on" href="#pp" x="60.5" y="42" width="9" height="12.6" style="--i:66"/><use class="pp on" href="#pp" x="70.5" y="42" width="9" height="12.6" style="--i:67"/><use class="pp on" href="#pp" x="80.5" y="42" width="9" height="12.6" style="--i:68"/><use class="pp on" href="#pp" x="90.5" y="42" width="9" height="12.6" style="--i:69"/><use class="pp on" href="#pp" x="100.5" y="42" width="9" height="12.6" style="--i:70"/><use class="pp on" href="#pp" x="110.5" y="42" width="9" height="12.6" style="--i:71"/><use class="pp on" href="#pp" x="120.5" y="42" width="9" height="12.6" style="--i:72"/><use class="pp on" href="#pp" x="130.5" y="42" width="9" height="12.6" style="--i:73"/><use class="pp on" href="#pp" x="140.5" y="42" width="9" height="12.6" style="--i:74"/><use class="pp on" href="#pp" x="150.5" y="42" width="9" height="12.6" style="--i:75"/><use class="pp on" href="#pp" x="160.5" y="42" width="9" height="12.6" style="--i:76"/><use class="pp on" href="#pp" x="170.5" y="42" width="9" height="12.6" style="--i:77"/><use class="pp on" href="#pp" x="180.5" y="42" width="9" height="12.6" style="--i:78"/><use class="pp on" href="#pp" x="190.5" y="42" width="9" height="12.6" style="--i:79"/><use class="pp on" href="#pp" x="0.5" y="56" width="9" height="12.6" style="--i:80"/><use class="pp on" href="#pp" x="10.5" y="56" width="9" height="12.6" style="--i:81"/><use class="pp" href="#pp" x="20.5" y="56" width="9" height="12.6" style="fill:url(#gp-82)"/><use class="pp" href="#pp" x="30.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="56" width="9" height="12.6"/></svg></div>
-            <p class="stat__txt">de los estudiantes de Ingeniería de Tarma mostró una tendencia alta a procrastinar.</p>
-            <p class="stat__cite">(Urco Cáceres, 2019)</p>
-          </li>
-          <li>
-            <p class="stat__num">61 %</p>
+          <li class="ticket">
+            <p class="ticket__num">61 %</p>
             <div class="pict" aria-hidden="true"><svg class="pict__svg" viewBox="0 0 200 70" focusable="false"><use class="pp on" href="#pp" x="0.5" y="0" width="9" height="12.6" style="--i:0"/><use class="pp on" href="#pp" x="10.5" y="0" width="9" height="12.6" style="--i:1"/><use class="pp on" href="#pp" x="20.5" y="0" width="9" height="12.6" style="--i:2"/><use class="pp on" href="#pp" x="30.5" y="0" width="9" height="12.6" style="--i:3"/><use class="pp on" href="#pp" x="40.5" y="0" width="9" height="12.6" style="--i:4"/><use class="pp on" href="#pp" x="50.5" y="0" width="9" height="12.6" style="--i:5"/><use class="pp on" href="#pp" x="60.5" y="0" width="9" height="12.6" style="--i:6"/><use class="pp on" href="#pp" x="70.5" y="0" width="9" height="12.6" style="--i:7"/><use class="pp on" href="#pp" x="80.5" y="0" width="9" height="12.6" style="--i:8"/><use class="pp on" href="#pp" x="90.5" y="0" width="9" height="12.6" style="--i:9"/><use class="pp on" href="#pp" x="100.5" y="0" width="9" height="12.6" style="--i:10"/><use class="pp on" href="#pp" x="110.5" y="0" width="9" height="12.6" style="--i:11"/><use class="pp on" href="#pp" x="120.5" y="0" width="9" height="12.6" style="--i:12"/><use class="pp on" href="#pp" x="130.5" y="0" width="9" height="12.6" style="--i:13"/><use class="pp on" href="#pp" x="140.5" y="0" width="9" height="12.6" style="--i:14"/><use class="pp on" href="#pp" x="150.5" y="0" width="9" height="12.6" style="--i:15"/><use class="pp on" href="#pp" x="160.5" y="0" width="9" height="12.6" style="--i:16"/><use class="pp on" href="#pp" x="170.5" y="0" width="9" height="12.6" style="--i:17"/><use class="pp on" href="#pp" x="180.5" y="0" width="9" height="12.6" style="--i:18"/><use class="pp on" href="#pp" x="190.5" y="0" width="9" height="12.6" style="--i:19"/><use class="pp on" href="#pp" x="0.5" y="14" width="9" height="12.6" style="--i:20"/><use class="pp on" href="#pp" x="10.5" y="14" width="9" height="12.6" style="--i:21"/><use class="pp on" href="#pp" x="20.5" y="14" width="9" height="12.6" style="--i:22"/><use class="pp on" href="#pp" x="30.5" y="14" width="9" height="12.6" style="--i:23"/><use class="pp on" href="#pp" x="40.5" y="14" width="9" height="12.6" style="--i:24"/><use class="pp on" href="#pp" x="50.5" y="14" width="9" height="12.6" style="--i:25"/><use class="pp on" href="#pp" x="60.5" y="14" width="9" height="12.6" style="--i:26"/><use class="pp on" href="#pp" x="70.5" y="14" width="9" height="12.6" style="--i:27"/><use class="pp on" href="#pp" x="80.5" y="14" width="9" height="12.6" style="--i:28"/><use class="pp on" href="#pp" x="90.5" y="14" width="9" height="12.6" style="--i:29"/><use class="pp on" href="#pp" x="100.5" y="14" width="9" height="12.6" style="--i:30"/><use class="pp on" href="#pp" x="110.5" y="14" width="9" height="12.6" style="--i:31"/><use class="pp on" href="#pp" x="120.5" y="14" width="9" height="12.6" style="--i:32"/><use class="pp on" href="#pp" x="130.5" y="14" width="9" height="12.6" style="--i:33"/><use class="pp on" href="#pp" x="140.5" y="14" width="9" height="12.6" style="--i:34"/><use class="pp on" href="#pp" x="150.5" y="14" width="9" height="12.6" style="--i:35"/><use class="pp on" href="#pp" x="160.5" y="14" width="9" height="12.6" style="--i:36"/><use class="pp on" href="#pp" x="170.5" y="14" width="9" height="12.6" style="--i:37"/><use class="pp on" href="#pp" x="180.5" y="14" width="9" height="12.6" style="--i:38"/><use class="pp on" href="#pp" x="190.5" y="14" width="9" height="12.6" style="--i:39"/><use class="pp on" href="#pp" x="0.5" y="28" width="9" height="12.6" style="--i:40"/><use class="pp on" href="#pp" x="10.5" y="28" width="9" height="12.6" style="--i:41"/><use class="pp on" href="#pp" x="20.5" y="28" width="9" height="12.6" style="--i:42"/><use class="pp on" href="#pp" x="30.5" y="28" width="9" height="12.6" style="--i:43"/><use class="pp on" href="#pp" x="40.5" y="28" width="9" height="12.6" style="--i:44"/><use class="pp on" href="#pp" x="50.5" y="28" width="9" height="12.6" style="--i:45"/><use class="pp on" href="#pp" x="60.5" y="28" width="9" height="12.6" style="--i:46"/><use class="pp on" href="#pp" x="70.5" y="28" width="9" height="12.6" style="--i:47"/><use class="pp on" href="#pp" x="80.5" y="28" width="9" height="12.6" style="--i:48"/><use class="pp on" href="#pp" x="90.5" y="28" width="9" height="12.6" style="--i:49"/><use class="pp on" href="#pp" x="100.5" y="28" width="9" height="12.6" style="--i:50"/><use class="pp on" href="#pp" x="110.5" y="28" width="9" height="12.6" style="--i:51"/><use class="pp on" href="#pp" x="120.5" y="28" width="9" height="12.6" style="--i:52"/><use class="pp on" href="#pp" x="130.5" y="28" width="9" height="12.6" style="--i:53"/><use class="pp on" href="#pp" x="140.5" y="28" width="9" height="12.6" style="--i:54"/><use class="pp on" href="#pp" x="150.5" y="28" width="9" height="12.6" style="--i:55"/><use class="pp on" href="#pp" x="160.5" y="28" width="9" height="12.6" style="--i:56"/><use class="pp on" href="#pp" x="170.5" y="28" width="9" height="12.6" style="--i:57"/><use class="pp on" href="#pp" x="180.5" y="28" width="9" height="12.6" style="--i:58"/><use class="pp on" href="#pp" x="190.5" y="28" width="9" height="12.6" style="--i:59"/><use class="pp on" href="#pp" x="0.5" y="42" width="9" height="12.6" style="--i:60"/><use class="pp" href="#pp" x="10.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="42" width="9" height="12.6"/><use class="pp" href="#pp" x="0.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="10.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="20.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="30.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="56" width="9" height="12.6"/></svg></div>
-            <p class="stat__txt">de los estudiantes de pregrado de la Universidad Continental tuvo un nivel moderado.</p>
-            <p class="stat__cite">(Herquínigo Mendoza, 2021)</p>
+            <p class="ticket__txt">de los estudiantes de pregrado de la Universidad Continental tuvo un nivel moderado.</p>
+            <p class="ticket__cite">(Herquínigo Mendoza, 2021)</p>
           </li>
         </ul>
-
-        <p class="stats__legend">Cada figura representa a 1 de cada 100 personas.</p>
-
+        <p class="tickets__legend">En los pictogramas, cada figura representa a 1 de cada 100 personas.</p>
         <p class="aside"><strong>¿Por qué importa?</strong> En 3525 universitarios de Suecia, la procrastinación se asoció, nueve meses después, con más síntomas de depresión, ansiedad y estrés, peor calidad del sueño y soledad; los autores consideran pequeñas estas asociaciones (Johansson et al., 2023).</p>
       </div>
     </section>
 
-    <!-- 4.4 Qué se relaciona con ella -->
+    <section id="ingenieria" class="eng" aria-labelledby="h-ing">
+      <div class="wrap">
+        <h2 id="h-ing">¿Y en Ingeniería?</h2>
+        <p class="lead">Varios de los estudios se hicieron con estudiantes de Ingeniería, como los de nuestra facultad.</p>
+        <div class="eng__grid">
+          <article class="eng__big">
+            <p class="eng__num">82,4 %</p>
+            <div class="pict" aria-hidden="true"><svg class="pict__svg" viewBox="0 0 200 70" focusable="false"><use class="pp on" href="#pp" x="0.5" y="0" width="9" height="12.6" style="--i:0"/><use class="pp on" href="#pp" x="10.5" y="0" width="9" height="12.6" style="--i:1"/><use class="pp on" href="#pp" x="20.5" y="0" width="9" height="12.6" style="--i:2"/><use class="pp on" href="#pp" x="30.5" y="0" width="9" height="12.6" style="--i:3"/><use class="pp on" href="#pp" x="40.5" y="0" width="9" height="12.6" style="--i:4"/><use class="pp on" href="#pp" x="50.5" y="0" width="9" height="12.6" style="--i:5"/><use class="pp on" href="#pp" x="60.5" y="0" width="9" height="12.6" style="--i:6"/><use class="pp on" href="#pp" x="70.5" y="0" width="9" height="12.6" style="--i:7"/><use class="pp on" href="#pp" x="80.5" y="0" width="9" height="12.6" style="--i:8"/><use class="pp on" href="#pp" x="90.5" y="0" width="9" height="12.6" style="--i:9"/><use class="pp on" href="#pp" x="100.5" y="0" width="9" height="12.6" style="--i:10"/><use class="pp on" href="#pp" x="110.5" y="0" width="9" height="12.6" style="--i:11"/><use class="pp on" href="#pp" x="120.5" y="0" width="9" height="12.6" style="--i:12"/><use class="pp on" href="#pp" x="130.5" y="0" width="9" height="12.6" style="--i:13"/><use class="pp on" href="#pp" x="140.5" y="0" width="9" height="12.6" style="--i:14"/><use class="pp on" href="#pp" x="150.5" y="0" width="9" height="12.6" style="--i:15"/><use class="pp on" href="#pp" x="160.5" y="0" width="9" height="12.6" style="--i:16"/><use class="pp on" href="#pp" x="170.5" y="0" width="9" height="12.6" style="--i:17"/><use class="pp on" href="#pp" x="180.5" y="0" width="9" height="12.6" style="--i:18"/><use class="pp on" href="#pp" x="190.5" y="0" width="9" height="12.6" style="--i:19"/><use class="pp on" href="#pp" x="0.5" y="14" width="9" height="12.6" style="--i:20"/><use class="pp on" href="#pp" x="10.5" y="14" width="9" height="12.6" style="--i:21"/><use class="pp on" href="#pp" x="20.5" y="14" width="9" height="12.6" style="--i:22"/><use class="pp on" href="#pp" x="30.5" y="14" width="9" height="12.6" style="--i:23"/><use class="pp on" href="#pp" x="40.5" y="14" width="9" height="12.6" style="--i:24"/><use class="pp on" href="#pp" x="50.5" y="14" width="9" height="12.6" style="--i:25"/><use class="pp on" href="#pp" x="60.5" y="14" width="9" height="12.6" style="--i:26"/><use class="pp on" href="#pp" x="70.5" y="14" width="9" height="12.6" style="--i:27"/><use class="pp on" href="#pp" x="80.5" y="14" width="9" height="12.6" style="--i:28"/><use class="pp on" href="#pp" x="90.5" y="14" width="9" height="12.6" style="--i:29"/><use class="pp on" href="#pp" x="100.5" y="14" width="9" height="12.6" style="--i:30"/><use class="pp on" href="#pp" x="110.5" y="14" width="9" height="12.6" style="--i:31"/><use class="pp on" href="#pp" x="120.5" y="14" width="9" height="12.6" style="--i:32"/><use class="pp on" href="#pp" x="130.5" y="14" width="9" height="12.6" style="--i:33"/><use class="pp on" href="#pp" x="140.5" y="14" width="9" height="12.6" style="--i:34"/><use class="pp on" href="#pp" x="150.5" y="14" width="9" height="12.6" style="--i:35"/><use class="pp on" href="#pp" x="160.5" y="14" width="9" height="12.6" style="--i:36"/><use class="pp on" href="#pp" x="170.5" y="14" width="9" height="12.6" style="--i:37"/><use class="pp on" href="#pp" x="180.5" y="14" width="9" height="12.6" style="--i:38"/><use class="pp on" href="#pp" x="190.5" y="14" width="9" height="12.6" style="--i:39"/><use class="pp on" href="#pp" x="0.5" y="28" width="9" height="12.6" style="--i:40"/><use class="pp on" href="#pp" x="10.5" y="28" width="9" height="12.6" style="--i:41"/><use class="pp on" href="#pp" x="20.5" y="28" width="9" height="12.6" style="--i:42"/><use class="pp on" href="#pp" x="30.5" y="28" width="9" height="12.6" style="--i:43"/><use class="pp on" href="#pp" x="40.5" y="28" width="9" height="12.6" style="--i:44"/><use class="pp on" href="#pp" x="50.5" y="28" width="9" height="12.6" style="--i:45"/><use class="pp on" href="#pp" x="60.5" y="28" width="9" height="12.6" style="--i:46"/><use class="pp on" href="#pp" x="70.5" y="28" width="9" height="12.6" style="--i:47"/><use class="pp on" href="#pp" x="80.5" y="28" width="9" height="12.6" style="--i:48"/><use class="pp on" href="#pp" x="90.5" y="28" width="9" height="12.6" style="--i:49"/><use class="pp on" href="#pp" x="100.5" y="28" width="9" height="12.6" style="--i:50"/><use class="pp on" href="#pp" x="110.5" y="28" width="9" height="12.6" style="--i:51"/><use class="pp on" href="#pp" x="120.5" y="28" width="9" height="12.6" style="--i:52"/><use class="pp on" href="#pp" x="130.5" y="28" width="9" height="12.6" style="--i:53"/><use class="pp on" href="#pp" x="140.5" y="28" width="9" height="12.6" style="--i:54"/><use class="pp on" href="#pp" x="150.5" y="28" width="9" height="12.6" style="--i:55"/><use class="pp on" href="#pp" x="160.5" y="28" width="9" height="12.6" style="--i:56"/><use class="pp on" href="#pp" x="170.5" y="28" width="9" height="12.6" style="--i:57"/><use class="pp on" href="#pp" x="180.5" y="28" width="9" height="12.6" style="--i:58"/><use class="pp on" href="#pp" x="190.5" y="28" width="9" height="12.6" style="--i:59"/><use class="pp on" href="#pp" x="0.5" y="42" width="9" height="12.6" style="--i:60"/><use class="pp on" href="#pp" x="10.5" y="42" width="9" height="12.6" style="--i:61"/><use class="pp on" href="#pp" x="20.5" y="42" width="9" height="12.6" style="--i:62"/><use class="pp on" href="#pp" x="30.5" y="42" width="9" height="12.6" style="--i:63"/><use class="pp on" href="#pp" x="40.5" y="42" width="9" height="12.6" style="--i:64"/><use class="pp on" href="#pp" x="50.5" y="42" width="9" height="12.6" style="--i:65"/><use class="pp on" href="#pp" x="60.5" y="42" width="9" height="12.6" style="--i:66"/><use class="pp on" href="#pp" x="70.5" y="42" width="9" height="12.6" style="--i:67"/><use class="pp on" href="#pp" x="80.5" y="42" width="9" height="12.6" style="--i:68"/><use class="pp on" href="#pp" x="90.5" y="42" width="9" height="12.6" style="--i:69"/><use class="pp on" href="#pp" x="100.5" y="42" width="9" height="12.6" style="--i:70"/><use class="pp on" href="#pp" x="110.5" y="42" width="9" height="12.6" style="--i:71"/><use class="pp on" href="#pp" x="120.5" y="42" width="9" height="12.6" style="--i:72"/><use class="pp on" href="#pp" x="130.5" y="42" width="9" height="12.6" style="--i:73"/><use class="pp on" href="#pp" x="140.5" y="42" width="9" height="12.6" style="--i:74"/><use class="pp on" href="#pp" x="150.5" y="42" width="9" height="12.6" style="--i:75"/><use class="pp on" href="#pp" x="160.5" y="42" width="9" height="12.6" style="--i:76"/><use class="pp on" href="#pp" x="170.5" y="42" width="9" height="12.6" style="--i:77"/><use class="pp on" href="#pp" x="180.5" y="42" width="9" height="12.6" style="--i:78"/><use class="pp on" href="#pp" x="190.5" y="42" width="9" height="12.6" style="--i:79"/><use class="pp on" href="#pp" x="0.5" y="56" width="9" height="12.6" style="--i:80"/><use class="pp on" href="#pp" x="10.5" y="56" width="9" height="12.6" style="--i:81"/><use class="pp" href="#pp" x="20.5" y="56" width="9" height="12.6" style="fill:url(#gp-part)"/><use class="pp" href="#pp" x="30.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="40.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="50.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="60.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="70.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="80.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="90.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="100.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="110.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="120.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="130.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="140.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="150.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="160.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="170.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="180.5" y="56" width="9" height="12.6"/><use class="pp" href="#pp" x="190.5" y="56" width="9" height="12.6"/></svg></div>
+            <p>de los estudiantes de Ingeniería de una universidad de Tarma mostró una tendencia alta a procrastinar.</p>
+            <p class="eng__cite">(Urco Cáceres, 2019)</p>
+          </article>
+          <article class="eng__item">
+            <p class="eng__num">×2</p>
+            <p>Estudiar Ingeniería duplicó el riesgo de procrastinar frente a estudiar Medicina (ORa = 2,01).</p>
+            <p class="eng__cite">(Ben Alaya et al., 2021)</p>
+          </article>
+          <article class="eng__item">
+            <p class="eng__num eng__num--word">Autorregulación</p>
+            <p>En estudiantes de Ingeniería de Panamá fue el factor que más favoreció la procrastinación, seguida del mecanismo de enseñanza.</p>
+            <p class="eng__cite">(Montilla et al., 2020)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="factores" aria-labelledby="h-factores">
       <div class="wrap">
-        <p class="kicker">Seis factores, dos grupos</p>
         <h2 id="h-factores">¿Qué se relaciona con ella?</h2>
-
+        <p class="lead">Los estudios agrupan los factores en dos cajones: lo que depende de cada persona y lo que pasa en sus estudios.</p>
         <div class="factors">
-          <article class="factor">
-            <svg class="factor__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22"/><circle cx="24" cy="18" r="6"/><path d="M12 38c1.5-7 6.5-10 12-10s10.5 3 12 10"/></svg>
+          <article class="factor factor--p">
             <h3>Factores personales</h3>
             <ul>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><p><strong>Autorregulación:</strong> planificar, fijarse metas y perseverar.</p></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.4 2.4 4.2-4.6"/></svg><p><strong>Autoeficacia académica:</strong> confiar en la propia capacidad para cumplir tareas y evaluaciones.</p></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.4 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z"/></svg><p><strong>Perfeccionismo:</strong> exigencia excesiva y temor a equivocarse.</p></li>
+              <li><strong>Autorregulación:</strong> planificar, fijarse metas y perseverar.</li>
+              <li><strong>Autoeficacia académica:</strong> confiar en la propia capacidad para cumplir tareas y evaluaciones.</li>
+              <li><strong>Perfeccionismo:</strong> exigencia excesiva y temor a equivocarse.</li>
             </ul>
             <p class="factor__note">La responsabilidad es el rasgo de personalidad que más se relaciona con la procrastinación (Steel y Klingsieck, 2016) y explica buena parte de sus diferencias entre estudiantes (Tsermentseli y Monks, 2026).</p>
           </article>
-
-          <article class="factor">
-            <svg class="factor__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22"/><path d="M14 15.5c3.7-1.4 7.2-1 10 1.5 2.8-2.5 6.3-2.9 10-1.5v17c-3.7-1.4-7.2-1-10 1.5-2.8-2.5-6.3-2.9-10-1.5v-17Z"/><path d="M24 17v17"/></svg>
+          <article class="factor factor--a">
             <h3>Factores académicos</h3>
             <ul>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 4.5-9 4.5-9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><p><strong>Carga académica:</strong> número de tareas y evaluaciones que coinciden.</p></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><p><strong>Hábitos de estudio:</strong> organización y regularidad del estudio.</p></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9 15 2.2 2.2L15.5 13"/></svg><p><strong>Claridad de consignas y plazos:</strong> entender las instrucciones y conocer las fechas de entrega.</p></li>
+              <li><strong>Carga académica:</strong> número de tareas y evaluaciones que coinciden.</li>
+              <li><strong>Hábitos de estudio:</strong> organización y regularidad del estudio.</li>
+              <li><strong>Claridad de consignas y plazos:</strong> entender las instrucciones y conocer las fechas de entrega.</li>
             </ul>
             <p class="factor__note">Los modelos teóricos de la procrastinación universitaria incluyen una dimensión académica, junto a otras como la gestión del tiempo y el entorno (Araya-Castillo et al., 2023).</p>
           </article>
         </div>
-
         <figure class="map">
 <svg class="map__svg map__svg--wide" viewBox="0 0 960 240" role="img" aria-labelledby="mw-t">
 <title id="mw-t">Mapa de factores: dos cuadros, factores personales (autorregulación, autoeficacia académica y perfeccionismo) y factores académicos (carga académica, hábitos de estudio y claridad de consignas y plazos), unidos con flechas a un cuadro central: procrastinación académica.</title>
@@ -234,10 +211,125 @@
       </div>
     </section>
 
-    <!-- ¿Mito o realidad? -->
+    <section id="simulador" class="sim" aria-labelledby="h-sim">
+      <div class="wrap sim__grid">
+        <div class="sim__intro">
+          <h2 id="h-sim">La ecuación de la espera</h2>
+          <p>Según la teoría de la motivación temporal, la motivación aumenta con la expectativa de lograr un resultado y con el valor de la meta, pero disminuye cuanto más lejos está ese resultado y cuanto mayor es la impulsividad (Steel y König, 2006, como se citó en Svartdal et al., 2020).</p>
+          <p class="sim__formula" aria-label="Motivación es igual a expectativa por valor, dividido entre impulsividad por demora">
+            <span class="sim__lhs">Motivación</span><span class="sim__eq">=</span>
+            <span class="sim__frac"><span>Expectativa × Valor</span><span>Impulsividad × Demora</span></span>
+          </p>
+          <p class="sim__note">Representación simplificada. Mueve los controles para ver cómo cambia; es un ejercicio ilustrativo y no mide tu nivel de procrastinación.</p>
+        </div>
+        <form class="sim__panel" onsubmit="return false">
+          <div class="gauge" aria-hidden="true">
+            <svg viewBox="0 0 240 140" focusable="false">
+              <path class="gauge__arc gauge__arc--lo" d="M20 120A100 100 0 0 1 67 35.2"/>
+              <path class="gauge__arc gauge__arc--mid" d="M73.1 31.7A100 100 0 0 1 166.9 31.7"/>
+              <path class="gauge__arc gauge__arc--hi" d="M173 35.2A100 100 0 0 1 220 120"/>
+              <g class="gauge__ticks"></g>
+              <text class="gauge__lab" x="22" y="136">Después</text>
+              <text class="gauge__lab" x="218" y="136" text-anchor="end">Hoy</text>
+              <g class="gauge__needle"><path d="M120 120 120 32"/><circle cx="120" cy="120" r="8"/></g>
+            </svg>
+          </div>
+          <output class="sim__out" for="s-e s-v s-i s-d" aria-live="polite">Empiezas, pero sin apuro.</output>
+          <div class="sim__ctrl">
+            <label for="s-e">¿Qué tan seguro estás de que te saldrá bien? <span class="sim__k">Expectativa</span></label>
+            <input id="s-e" type="range" min="1" max="10" value="6">
+          </div>
+          <div class="sim__ctrl">
+            <label for="s-v">¿Cuánto te importa la tarea? <span class="sim__k">Valor</span></label>
+            <input id="s-v" type="range" min="1" max="10" value="7">
+          </div>
+          <div class="sim__ctrl">
+            <label for="s-i">¿Qué tanto te distraen otras cosas? <span class="sim__k">Impulsividad</span></label>
+            <input id="s-i" type="range" min="1" max="10" value="6">
+          </div>
+          <div class="sim__ctrl">
+            <label for="s-d">¿Cuántas semanas faltan para la entrega? <span class="sim__k">Demora</span></label>
+            <input id="s-d" type="range" min="1" max="10" value="7">
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="recomendaciones" aria-labelledby="h-reco">
+      <div class="wrap">
+        <h2 id="h-reco">¿Qué recomiendan los estudios?</h2>
+        <p class="reco-lead">Fortalecer las habilidades de autorregulación de los universitarios, sobre todo fijarse metas y perseverar (Elizondo et al., 2024).</p>
+        <p>Además, Svartdal et al. (2020) identifican nueve factores del entorno de estudio que pueden fomentar la procrastinación y proponen cambios para la universidad y para cada estudiante. <span class="js-only">Elige un factor.</span></p>
+        <ul class="env">
+          <li class="env__item" id="env-1">
+            <h3 class="env__factor">Mucha libertad para organizar el estudio</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Reducir las opciones innecesarias y dar marcos más claros para organizar cada curso.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Llevar un curso o taller de autorregulación.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-2">
+            <h3 class="env__factor">Plazos largos</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Poner plazos cortos cuando sea posible.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Desarrollar a propósito tus habilidades para planificar, vigilar y controlar tu aprendizaje.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-3">
+            <h3 class="env__factor">Tareas poco atractivas</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Plantear metas de aprendizaje que el estudiante pueda hacer suyas y enseñar técnicas de estudio para las tareas centrales.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Aprender técnicas de estudio y buscar cómo hacer que el material tenga sentido para ti.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-4">
+            <h3 class="env__factor">Tentaciones y distracciones</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Limitar las tentaciones y distracciones innecesarias.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Estar atento a las tentaciones y distracciones innecesarias.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-5">
+            <h3 class="env__factor">Poca información sobre el propio avance</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Informar a los estudiantes sobre su progreso en el curso.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Revisar tu avance y darte cuenta de cuándo tus estrategias no alcanzan.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-6">
+            <h3 class="env__factor">Poca formación en técnicas de estudio</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Capacitar en técnicas de estudio a docentes y estudiantes, vinculadas al contenido de los cursos.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Aprender técnicas de estudio que han demostrado ser eficaces.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-7">
+            <h3 class="env__factor">Pocas oportunidades de sentirse capaz</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Dar experiencias de logro y una retroalimentación breve y positiva.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Organizar tu aprendizaje para conseguir muchos logros pequeños.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-8">
+            <h3 class="env__factor">Trabajo en grupo poco eficaz</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Formar grupos interdependientes en los que cada integrante tenga una tarea propia.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Participar asegurándote de que tu parte ayude a cumplir la meta del grupo.</p></div>
+            </div>
+          </li>
+          <li class="env__item" id="env-9">
+            <h3 class="env__factor">Influencia de los compañeros</h3>
+            <div class="env__recs">
+              <div class="env__rec env__rec--uni"><p class="env__who">Lo que puede hacer la universidad</p><p>Establecer normas claras sobre empezar a tiempo las tareas académicas.</p></div>
+              <div class="env__rec env__rec--you"><p class="env__who">Lo que puedes hacer tú</p><p>Fijarte bien en quiénes tomas como modelo.</p></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section id="mito-realidad" aria-labelledby="h-mito">
       <div class="wrap">
-        <p class="kicker">Ponte a prueba</p>
         <h2 id="h-mito">¿Mito o realidad?</h2>
         <p>Elige una opción en cada afirmación.</p>
         <ol class="quiz">
@@ -278,8 +370,17 @@
             <div class="quiz__exp"><p class="quiz__ans">Es un mito.</p><p>La libertad para organizar el estudio, los plazos largos y las distracciones pueden favorecer la procrastinación (Svartdal et al., 2020).</p></div>
           </li>
           <li class="quiz__card" data-answer="mito">
-            <p class="quiz__q" id="mq5">Ser perfeccionista siempre aumenta la procrastinación.</p>
+            <p class="quiz__q" id="mq5">Trabajar en grupo siempre evita que se posterguen las tareas.</p>
             <div class="quiz__btns" role="group" aria-labelledby="mq5">
+              <button type="button" class="quiz__btn" data-choice="mito">Mito</button>
+              <button type="button" class="quiz__btn" data-choice="realidad">Realidad</button>
+            </div>
+            <div class="quiz__fb" aria-live="polite"></div>
+            <div class="quiz__exp"><p class="quiz__ans">Es un mito.</p><p>El trabajo en grupo poco eficaz y la influencia de los compañeros figuran entre los factores del entorno que pueden fomentarla (Svartdal et al., 2020).</p></div>
+          </li>
+          <li class="quiz__card" data-answer="mito">
+            <p class="quiz__q" id="mq6">Ser perfeccionista siempre aumenta la procrastinación.</p>
+            <div class="quiz__btns" role="group" aria-labelledby="mq6">
               <button type="button" class="quiz__btn" data-choice="mito">Mito</button>
               <button type="button" class="quiz__btn" data-choice="realidad">Realidad</button>
             </div>
@@ -291,12 +392,9 @@
       </div>
     </section>
 
-    <!-- 4.5 Lo que dicen los estudios -->
     <section id="estudios" aria-labelledby="h-estudios">
       <div class="wrap">
-        <p class="kicker">La evidencia</p>
         <h2 id="h-estudios">Lo que dicen los estudios</h2>
-
         <ul class="insights">
           <li>
             <p class="insight__idea">La autorregulación es el factor que más pesa.</p>
@@ -423,8 +521,7 @@
         </figure>
 
         <details class="more">
-          <summary>Ver los 10 estudios</summary>
-
+          <summary>Abrir el fichero de los 10 estudios</summary>
           <div class="filters" role="group" aria-label="Filtrar estudios por ámbito">
             <button type="button" data-filter="todos" aria-pressed="true">Todos (10)</button>
             <button type="button" data-filter="internacional" aria-pressed="false">Internacional (6)</button>
@@ -432,10 +529,9 @@
             <button type="button" data-filter="local" aria-pressed="false">Local (1)</button>
           </div>
           <p class="sr-only" aria-live="polite" id="filtro-estado"></p>
-
           <ol class="cards">
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 01</span></p>
               <h3>Montilla et al. (2020)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Panamá</dd></div>
@@ -444,7 +540,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 02</span></p>
               <h3>Hidayat y Hasim (2023)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Indonesia</dd></div>
@@ -453,7 +549,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 03</span></p>
               <h3>Elizondo et al. (2024)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Chile</dd></div>
@@ -462,7 +558,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 04</span></p>
               <h3>Mejia et al. (2023)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>10 países de Latinoamérica</dd></div>
@@ -471,16 +567,16 @@
               </dl>
             </li>
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 05</span></p>
               <h3>Johansson et al. (2023)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Suecia</dd></div>
-                <div><dt>Participantes</dt><dd>3525</dd></div>
+                <div><dt>Participantes</dt><dd>3525 (63 % mujeres; edad media de 24,8 años)</dd></div>
                 <div><dt>Hallazgo</dt><dd>La procrastinación se asoció, nueve meses después, con más síntomas de depresión, ansiedad y estrés, dolor incapacitante, peor calidad del sueño, inactividad física, soledad y dificultades económicas; los autores consideran pequeñas estas asociaciones (Johansson et al., 2023).</dd></div>
               </dl>
             </li>
             <li class="card" data-ambito="internacional">
-              <p class="card__top"><span class="badge badge--internacional">Internacional</span></p>
+              <p class="card__top"><span class="badge badge--internacional">Internacional</span><span class="card__no" aria-hidden="true">Ficha 06</span></p>
               <h3>Ben Alaya et al. (2021)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Túnez</dd></div>
@@ -489,7 +585,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="nacional">
-              <p class="card__top"><span class="badge badge--nacional">Nacional</span></p>
+              <p class="card__top"><span class="badge badge--nacional">Nacional</span><span class="card__no" aria-hidden="true">Ficha 07</span></p>
               <h3>Charaña Mamani y Vílchez Julon (2021)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Perú (Tarapoto)</dd></div>
@@ -498,7 +594,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="nacional">
-              <p class="card__top"><span class="badge badge--nacional">Nacional</span></p>
+              <p class="card__top"><span class="badge badge--nacional">Nacional</span><span class="card__no" aria-hidden="true">Ficha 08</span></p>
               <h3>Urco Cáceres (2019)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Perú (Tarma)</dd></div>
@@ -507,7 +603,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="nacional">
-              <p class="card__top"><span class="badge badge--nacional">Nacional</span></p>
+              <p class="card__top"><span class="badge badge--nacional">Nacional</span><span class="card__no" aria-hidden="true">Ficha 09</span></p>
               <h3>Duda-Macera y Gallardo-Echenique (2022)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Perú (Lima)</dd></div>
@@ -516,7 +612,7 @@
               </dl>
             </li>
             <li class="card" data-ambito="local">
-              <p class="card__top"><span class="badge badge--local">Local</span></p>
+              <p class="card__top"><span class="badge badge--local">Local</span><span class="card__no" aria-hidden="true">Ficha 10</span></p>
               <h3>Herquínigo Mendoza (2021)</h3>
               <dl class="card__meta">
                 <div><dt>Lugar</dt><dd>Perú (Huancayo)</dd></div>
@@ -529,91 +625,70 @@
       </div>
     </section>
 
-    <!-- 4.6 Qué recomiendan los estudios -->
-    <section id="recomendaciones" aria-labelledby="h-reco">
-      <div class="wrap">
-        <p class="kicker">Para actuar</p>
-        <h2 id="h-reco">¿Qué recomiendan los estudios?</h2>
-        <ul class="recos">
-          <li>
-            <svg class="il" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-  <circle class="il-soft" cx="56" cy="66" r="52"/>
-  <circle class="il-paper il-st" cx="56" cy="66" r="44"/>
-  <circle class="il-acc il-st" cx="56" cy="66" r="31"/>
-  <circle class="il-paper il-st" cx="56" cy="66" r="19"/>
-  <circle class="il-rust il-st" cx="56" cy="66" r="7"/>
-  <path class="il-ln" d="M56 66 102 18"/>
-  <path class="il-rust il-st" d="M102 18l1-12 9 9zM92 28l-1-10 9 9z" style="stroke-width:2"/>
-</svg>
-            <p>Fortalecer las habilidades de autorregulación de los universitarios, sobre todo fijarse metas y perseverar.</p>
-            <p class="reco__cite">(Elizondo et al., 2024)</p>
-          </li>
-          <li>
-            <svg class="il" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-  <circle class="il-soft" cx="58" cy="60" r="54"/>
-  <rect class="il-paper il-st" x="14" y="22" width="68" height="64" rx="5"/>
-  <path class="il-rust" d="M14 27a5 5 0 0 1 5-5h58a5 5 0 0 1 5 5v13H14z"/>
-  <path class="il-ln" d="M32 15v14M64 15v14"/>
-  <path class="il-ln" d="M26 54h12M46 54h12M66 54h6M26 70h12M46 70h12" style="stroke:var(--border)"/>
-  <circle class="il-glass il-st" cx="76" cy="70" r="24"/>
-  <path class="il-ln" d="m93 88 18 18" style="stroke-width:6"/>
-  <circle class="il-ln" cx="76" cy="70" r="15" style="stroke:var(--brass);stroke-width:2"/>
-  <path class="il-ln" d="M76 60v10l7 4" style="stroke:var(--accent);stroke-width:3"/>
-</svg>
-            <p>Revisar los factores del entorno de estudio que favorecen la procrastinación, como los plazos largos y las distracciones, para reducirla y prevenirla.</p>
-            <p class="reco__cite">(Svartdal et al., 2020)</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 4.7 Quiénes investigamos -->
     <section id="equipo" aria-labelledby="h-equipo">
       <div class="wrap">
-        <p class="kicker">Las personas</p>
         <h2 id="h-equipo">El equipo</h2>
         <ul class="team">
-          <li>
-            <p class="team__ini" aria-hidden="true">AA</p>
-            <p class="team__name">Antezana Alonzo, Alexandra Dayana</p>
-            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
-            <p class="team__role">Secretaria</p>
+          <li class="pass">
+            <div class="pass__main">
+              <p class="pass__ini" aria-hidden="true">AA</p>
+              <div>
+                <p class="pass__name">Antezana Alonzo, Alexandra Dayana</p>
+                <p class="pass__meta">Ingeniería de Sistemas e Informática</p>
+              </div>
+            </div>
+            <div class="pass__stub"><p class="pass__k">Rol</p><p class="pass__role">Secretaria</p></div>
           </li>
-          <li>
-            <p class="team__ini" aria-hidden="true">LC</p>
-            <p class="team__name">Campos Castañeda, Luis Jeffri</p>
-            <p class="team__meta">Ingeniería de Minas</p>
-            <p class="team__role">Portavoz</p>
+          <li class="pass">
+            <div class="pass__main">
+              <p class="pass__ini" aria-hidden="true">LC</p>
+              <div>
+                <p class="pass__name">Campos Castañeda, Luis Jeffri</p>
+                <p class="pass__meta">Ingeniería de Minas</p>
+              </div>
+            </div>
+            <div class="pass__stub"><p class="pass__k">Rol</p><p class="pass__role">Portavoz</p></div>
           </li>
-          <li>
-            <p class="team__ini" aria-hidden="true">LN</p>
-            <p class="team__name">Napan Hernandez, Luisana Carolina</p>
-            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
-            <p class="team__role">Subcoordinadora</p>
+          <li class="pass">
+            <div class="pass__main">
+              <p class="pass__ini" aria-hidden="true">LN</p>
+              <div>
+                <p class="pass__name">Napan Hernandez, Luisana Carolina</p>
+                <p class="pass__meta">Ingeniería de Sistemas e Informática</p>
+              </div>
+            </div>
+            <div class="pass__stub"><p class="pass__k">Rol</p><p class="pass__role">Subcoordinadora</p></div>
           </li>
-          <li>
-            <p class="team__ini" aria-hidden="true">DP</p>
-            <p class="team__name">Prudencio Rios, Denis Wilder</p>
-            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
-            <p class="team__role">Coordinador</p>
+          <li class="pass">
+            <div class="pass__main">
+              <p class="pass__ini" aria-hidden="true">DP</p>
+              <div>
+                <p class="pass__name">Prudencio Rios, Denis Wilder</p>
+                <p class="pass__meta">Ingeniería de Sistemas e Informática</p>
+              </div>
+            </div>
+            <div class="pass__stub"><p class="pass__k">Rol</p><p class="pass__role">Coordinador</p></div>
           </li>
-          <li>
-            <p class="team__ini" aria-hidden="true">DT</p>
-            <p class="team__name">Tornero Bermúdez, Diego Ali Gadiel</p>
-            <p class="team__meta">Ingeniería de Sistemas e Informática</p>
-            <p class="team__role">Coordinador</p>
+          <li class="pass">
+            <div class="pass__main">
+              <p class="pass__ini" aria-hidden="true">DT</p>
+              <div>
+                <p class="pass__name">Tornero Bermúdez, Diego Ali Gadiel</p>
+                <p class="pass__meta">Ingeniería de Sistemas e Informática</p>
+              </div>
+            </div>
+            <div class="pass__stub"><p class="pass__k">Rol</p><p class="pass__role">Coordinador</p></div>
           </li>
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- 4.8 Pie de página -->
   <footer class="footer">
     <div class="wrap">
       <h2 class="footer__title">Sobre este proyecto</h2>
       <dl class="credits">
-        <div><dt>Proyecto</dt><dd>Factores asociados a la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, 2026</dd></div>
+        <div class="credits__wide"><dt>Proyecto</dt><dd>Factores asociados a la procrastinación académica en estudiantes de la Facultad de Ingeniería de la Universidad Continental, Huancayo, 2026</dd></div>
         <div><dt>Universidad</dt><dd>Universidad Continental</dd></div>
         <div><dt>Facultad</dt><dd>Facultad de Ingeniería</dd></div>
         <div><dt>Escuela</dt><dd>E.A.P. Ingeniería de Sistemas e Informática</dd></div>
@@ -623,7 +698,6 @@
         <div><dt>Docente</dt><dd>Colachagua Obando, Julio César</dd></div>
         <div><dt>Lugar y fecha</dt><dd>Huancayo, <time datetime="2026-10-30">30 de octubre de 2026</time></dd></div>
       </dl>
-
       <details class="footer__refs">
         <summary>Referencias (APA 7)</summary>
         <ol class="refs">
@@ -647,11 +721,9 @@
           <li>Urco Cáceres, S. A. (2019). <i>Relación entre la gestión del tiempo y procrastinación académica en los estudiantes de la Facultad de Ingeniería de la Universidad Católica Sedes Sapientiae, filial Tarma, 2018</i> [Tesis de maestría, Universidad Peruana de Ciencias e Informática]. Repositorio Institucional UPCI. <a href="https://repositorio.upci.edu.pe/handle/upci/36">https://repositorio.upci.edu.pe/handle/upci/36</a></li>
         </ol>
       </details>
-
-      <p class="footer__made">Sitio elaborado por el Equipo 07 con Claude Code (Anthropic) y publicado en GitHub Pages. El equipo verificó cada dato y cita con el informe y las fuentes originales.</p>
     </div>
   </footer>
 
-  <script src="script.js?v=289b8be9"></script>
+  <script src="script.js?v=2dc793f0"></script>
 </body>
 </html>

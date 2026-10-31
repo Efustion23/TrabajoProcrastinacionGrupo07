@@ -3,41 +3,46 @@ document.documentElement.classList.add('js');
 const root = document.documentElement;
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-// Reloj de bolsillo: el minutero da una vuelta y el horario pasa de las 11 a las 12 mientras se lee
-function dial(className, full) {
-  let marks = '';
-  for (let i = 0; i < 60; i++) {
-    const hour = i % 5 === 0;
-    if (!hour && !full) continue;
-    const a = (i * 6 * Math.PI) / 180;
-    const r1 = 86;
-    const r2 = hour ? (full ? 76 : 70) : 81;
-    const x1 = (100 + r1 * Math.sin(a)).toFixed(2);
-    const y1 = (100 - r1 * Math.cos(a)).toFixed(2);
-    const x2 = (100 + r2 * Math.sin(a)).toFixed(2);
-    const y2 = (100 - r2 * Math.cos(a)).toFixed(2);
-    marks += `<line class="dial__tick${hour ? ' dial__tick--h' : ''}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
+// Tablero de pendientes: las paletas giran una sola vez al cargar hasta mostrar cada estado
+(function board() {
+  const ALPHA = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ';
+  const groups = [...document.querySelectorAll('.flaps')];
+  const width = Math.max(...groups.map((g) => g.dataset.text.length));
+  groups.forEach((g, row) => {
+    const target = g.dataset.text.padEnd(width, ' ');
+    g.textContent = '';
+    [...target].forEach((ch, col) => {
+      const cell = document.createElement('span');
+      cell.className = 'flap';
+      g.append(cell);
+      if (reduceMotion.matches) { cell.textContent = ch; return; }
+      let steps = 6 + col + row * 3;
+      cell.textContent = ' ';
+      const spin = () => {
+        cell.classList.remove('tick');
+        void cell.offsetWidth;
+        cell.classList.add('tick');
+        if (steps-- > 0) {
+          cell.textContent = ALPHA[Math.floor(Math.random() * ALPHA.length)];
+          setTimeout(spin, 70);
+        } else {
+          cell.textContent = ch;
+        }
+      };
+      setTimeout(spin, 350 + row * 120);
+    });
+  });
+  // Reloj del tablero con la hora local del visitante
+  const clock = document.querySelector('.board__time');
+  if (clock) {
+    const paint = () => {
+      const d = new Date();
+      clock.textContent = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+    };
+    paint();
+    setInterval(paint, 15000);
   }
-  const numerals = full
-    ? '<text class="dial__num" x="100" y="44">XII</text><text class="dial__num" x="160" y="106">III</text>' +
-      '<text class="dial__num" x="100" y="168">VI</text><text class="dial__num" x="40" y="106">IX</text>'
-    : '';
-  return `<svg class="${className}" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
-    <circle class="dial__case" cx="100" cy="100" r="96"/>
-    ${full ? '<circle class="dial__face" cx="100" cy="100" r="88"/><circle class="dial__ring" cx="100" cy="100" r="62"/>' : ''}
-    ${marks}${numerals}
-    <g class="dial__hands">
-      ${full
-        ? `<g class="dial__hand dial__hand--hour"><path d="M100 108V82"/><circle cx="100" cy="75" r="6.5"/><path d="M100 68.5V60"/></g>
-      <g class="dial__hand dial__hand--min"><path d="M100 114V68"/><circle cx="100" cy="61" r="6"/><path d="M100 55V52"/></g>`
-        : `<g class="dial__hand dial__hand--hour"><path d="M100 110V72"/><circle cx="100" cy="65" r="7"/><path d="M100 58V46"/></g>
-      <g class="dial__hand dial__hand--min"><path d="M100 114V56"/><circle cx="100" cy="49" r="6"/><path d="M100 43V24"/></g>`}
-    </g>
-    <circle class="dial__pin" cx="100" cy="100" r="${full ? 5 : 14}"/>
-  </svg>`;
-}
-document.querySelector('.brand').insertAdjacentHTML('afterbegin', dial('dial dial--mini', false));
-document.querySelector('.cover__art').insertAdjacentHTML('beforeend', dial('dial dial--hero', true));
+})();
 
 // Modo claro u oscuro, recordado en este navegador
 const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -45,8 +50,8 @@ const themeBtn = document.createElement('button');
 themeBtn.type = 'button';
 themeBtn.className = 'theme-btn';
 const icons = {
-  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>',
-  moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>'
+  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>',
+  moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>'
 };
 function isDark() {
   const t = root.dataset.theme;
@@ -85,60 +90,9 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); menuBtn.focus(); }
 });
 
-// Filtro de antecedentes por ámbito, con transición entre fichas
-const buttons = document.querySelectorAll('.filters button');
-const cards = document.querySelectorAll('.card');
-const status = document.getElementById('filtro-estado');
-cards.forEach((c, i) => { c.style.viewTransitionName = `ficha-${i + 1}`; });
-buttons.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const f = btn.dataset.filter;
-    const apply = () => {
-      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-      let shown = 0;
-      cards.forEach((c) => {
-        c.hidden = f !== 'todos' && c.dataset.ambito !== f;
-        if (!c.hidden) shown++;
-      });
-      status.textContent = `Se muestran ${shown} antecedentes.`;
-    };
-    if (document.startViewTransition && !reduceMotion.matches) document.startViewTransition(apply);
-    else apply();
-  });
-});
-
-// Botón para volver al inicio
-const toTop = document.createElement('button');
-toTop.type = 'button';
-toTop.className = 'to-top';
-toTop.setAttribute('aria-label', 'Volver al inicio');
-toTop.title = 'Volver al inicio';
-toTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';
-toTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0 });
-  document.querySelector('.brand').focus({ preventScroll: true });
-});
-document.body.append(toTop);
-
-// Progreso de lectura: mueve el reloj y muestra el botón de inicio
-let ticking = false;
-function update() {
-  ticking = false;
-  const max = root.scrollHeight - window.innerHeight;
-  const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-  root.style.setProperty('--p', p.toFixed(4));
-  toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight);
-}
-function requestUpdate() {
-  if (!ticking) { ticking = true; requestAnimationFrame(update); }
-}
-window.addEventListener('scroll', requestUpdate, { passive: true });
-window.addEventListener('resize', requestUpdate);
-update();
-
 // Resalta en el menú la sección visible
 const links = document.querySelectorAll('.nav a');
-const observer = new IntersectionObserver((entries) => {
+const spy = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     links.forEach((a) => {
@@ -147,80 +101,121 @@ const observer = new IntersectionObserver((entries) => {
     });
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
-document.querySelectorAll('main > section[id]').forEach((s) => observer.observe(s));
+document.querySelectorAll('main > section[id]').forEach((s) => spy.observe(s));
 
-// Aparición suave al llegar a cada bloque; las cifras cuentan, los pictogramas se encienden y las barras crecen.
-// Con "reducir movimiento" (o sin IntersectionObserver) todo se ve de entrada.
+// Pictogramas y gráfico de barras: se completan al llegar a ellos
 if (!reduceMotion.matches && 'IntersectionObserver' in window) {
   root.classList.add('anim');
-  const revealSel = [
-    'main > section:not(.cover) .kicker', 'main > section:not(.cover) h2', '.quote', '.define p', '.que-es__art',
-    '.stats li', '.stats__legend', '.aside', '.factor', '.map', '.insights li', '.chart', 'details.more',
-    '.quiz__card', '.recos li', '.team li', '.credits'
-  ].join(',');
-  const reveal = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('is-in');
-      reveal.unobserve(e.target);
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
-  document.querySelectorAll(revealSel).forEach((el) => {
-    const sibling = el.parentElement.querySelectorAll(':scope > ' + el.tagName.toLowerCase());
-    el.style.setProperty('--d', Math.min([...sibling].indexOf(el), 4));
-    el.classList.add('reveal');
-    reveal.observe(el);
-  });
-
-  // Pictogramas y gráfico: se "encienden" al aparecer
   const lights = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (!e.isIntersecting) return;
       e.target.classList.add('is-in');
       lights.unobserve(e.target);
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.35 });
   document.querySelectorAll('.pict, .chart').forEach((el) => lights.observe(el));
-
-  // Cifras: cuentan desde cero hasta su valor (el valor final queda en el texto para lectores de pantalla)
-  const counter = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      counter.unobserve(e.target);
-      const el = e.target;
-      const m = el.textContent.trim().match(/^(\d+(?:,\d+)?)\s*%$/);
-      if (!m) return;
-      const final = el.textContent.trim();
-      const target = parseFloat(m[1].replace(',', '.'));
-      const decimals = m[1].includes(',') ? m[1].split(',')[1].length : 0;
-      el.innerHTML = '<span class="sr-only"></span><span aria-hidden="true"></span>';
-      el.firstChild.textContent = final;
-      const live = el.lastChild;
-      const t0 = performance.now();
-      const dur = 1400;
-      (function tick(now) {
-        const k = Math.min(1, (now - t0) / dur);
-        const v = target * (1 - Math.pow(1 - k, 3));
-        live.textContent = v.toFixed(decimals).replace('.', ',') + ' %';
-        if (k < 1) requestAnimationFrame(tick); else live.textContent = final;
-      })(t0);
-    });
-  }, { threshold: 0.6 });
-  document.querySelectorAll('.stat__num:not(.stat__num--text)').forEach((el) => counter.observe(el));
 }
 
-// ¿Mito o realidad?: se responde con los botones (también con teclado); el resultado se anuncia con aria-live
-const quiz = document.querySelector('.quiz');
-if (quiz) {
-  const cards = [...quiz.querySelectorAll('.quiz__card')];
+// Simulador de la teoría de la motivación temporal (ilustrativo)
+(function simulator() {
+  const form = document.querySelector('.sim__panel');
+  if (!form) return;
+  const ticks = form.querySelector('.gauge__ticks');
+  for (let i = 0; i <= 10; i++) {
+    const a = Math.PI - (i / 10) * Math.PI;
+    const r1 = i % 5 === 0 ? 80 : 86;
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', (120 + r1 * Math.cos(a)).toFixed(1));
+    line.setAttribute('y1', (120 - r1 * Math.sin(a)).toFixed(1));
+    line.setAttribute('x2', (120 + 92 * Math.cos(a)).toFixed(1));
+    line.setAttribute('y2', (120 - 92 * Math.sin(a)).toFixed(1));
+    ticks.append(line);
+  }
+  const $ = (id) => form.querySelector('#' + id);
+  const needle = form.querySelector('.gauge__needle');
+  const out = form.querySelector('.sim__out');
+  let last = '';
+  function update() {
+    const m = (+$('s-e').value * +$('s-v').value) / (+$('s-i').value * +$('s-d').value);
+    const k = Math.max(-1, Math.min(1, Math.log10(m) / 1.5)); // de -1 (después) a 1 (hoy)
+    needle.style.setProperty('--a', (k * 90).toFixed(1) + 'deg');
+    const text = k < -0.25 ? 'Lo dejas para después.' : k > 0.3 ? 'Empiezas hoy.' : 'Empiezas, pero sin apuro.';
+    if (text !== last) { out.textContent = text; last = text; }
+  }
+  form.addEventListener('input', update);
+  update();
+})();
+
+// Recomendaciones: selector de los nueve factores del entorno
+(function envTabs() {
+  const list = document.querySelector('.env');
+  if (!list) return;
+  // Las fichas pasan de lista a paneles de pestañas
+  const panels = document.createElement('div');
+  panels.className = 'env';
+  const items = [...list.querySelectorAll('.env__item')].map((li) => {
+    const d = document.createElement('div');
+    d.className = li.className;
+    d.id = li.id;
+    d.append(...li.childNodes);
+    panels.append(d);
+    return d;
+  });
+  list.replaceWith(panels);
+  const ui = document.createElement('div');
+  ui.className = 'env-ui';
+  const tabs = document.createElement('div');
+  tabs.className = 'env-tabs';
+  tabs.setAttribute('role', 'tablist');
+  tabs.setAttribute('aria-label', 'Factores del entorno de estudio');
+  tabs.setAttribute('aria-orientation', 'vertical');
+  panels.before(ui);
+  ui.append(tabs, panels);
+  const btns = items.map((item, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'env-tab';
+    b.id = 'env-tab-' + (i + 1);
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-controls', item.id);
+    b.textContent = item.querySelector('.env__factor').textContent;
+    item.setAttribute('role', 'tabpanel');
+    item.setAttribute('aria-labelledby', b.id);
+    item.tabIndex = 0;
+    b.addEventListener('click', () => select(i));
+    b.addEventListener('keydown', (e) => {
+      const keys = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+      if (e.key in keys) { e.preventDefault(); select((i + keys[e.key] + items.length) % items.length, true); }
+      if (e.key === 'Home') { e.preventDefault(); select(0, true); }
+      if (e.key === 'End') { e.preventDefault(); select(items.length - 1, true); }
+    });
+    tabs.append(b);
+    return b;
+  });
+  function select(n, focus) {
+    btns.forEach((b, i) => {
+      b.setAttribute('aria-selected', String(i === n));
+      b.tabIndex = i === n ? 0 : -1;
+      items[i].hidden = i !== n;
+    });
+    if (focus) btns[n].focus();
+  }
+  select(0);
+})();
+
+// ¿Mito o realidad?: el resultado se anuncia con aria-live y se marca con un sello
+(function quiz() {
+  const quizEl = document.querySelector('.quiz');
+  if (!quizEl) return;
+  const cards = [...quizEl.querySelectorAll('.quiz__card')];
   const score = document.querySelector('.quiz__score');
   const icon = {
     ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="m7.8 12.4 3 3 5.6-6.4"/></svg>',
     bad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="m8.8 8.8 6.4 6.4M15.2 8.8l-6.4 6.4"/></svg>'
   };
-  let hits = 0;
+  let hits = 0, done = 0;
   cards.forEach((card) => {
-    // Sin JavaScript la explicación se ve de entrada; con JavaScript se guarda hasta que se responde
+    // Sin JavaScript la explicación se ve de entrada; con JavaScript aparece al responder
     const exp = card.querySelector('.quiz__exp');
     const ans = exp.querySelector('.quiz__ans').textContent;
     const text = exp.querySelector('p:not(.quiz__ans)').innerHTML;
@@ -234,13 +229,52 @@ if (quiz) {
         const ok = btn.dataset.choice === right;
         btn.classList.add('is-chosen', ok ? 'ok' : 'bad');
         card.querySelector(`.quiz__btn[data-choice="${right}"]`).classList.add('is-right');
+        const stamp = document.createElement('span');
+        stamp.className = 'stamp stamp--' + right;
+        stamp.setAttribute('aria-hidden', 'true');
+        stamp.textContent = right === 'mito' ? 'MITO' : 'REALIDAD';
+        card.append(stamp);
         fb.innerHTML = `<p class="quiz__res ${ok ? 'ok' : 'bad'}">${ok ? icon.ok : icon.bad}<span>${ok ? '¡Acertaste!' : 'No acertaste.'} ${ans}</span></p><p>${text}</p>`;
         if (ok) hits++;
-        score.innerHTML = `Aciertos: <strong>${hits} de ${cards.length}</strong>`;
-        score.classList.remove('bump');
-        void score.offsetWidth;
-        score.classList.add('bump');
+        done++;
+        score.innerHTML = `Aciertos: <strong>${hits} de ${cards.length}</strong>` + (done === cards.length ? '. Respondiste todas.' : '');
       });
     });
   });
-}
+})();
+
+// Fichero de estudios: filtro por ámbito
+const buttons = document.querySelectorAll('.filters button');
+const studyCards = document.querySelectorAll('.card');
+const status = document.getElementById('filtro-estado');
+buttons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+    let shown = 0;
+    studyCards.forEach((c) => {
+      c.hidden = f !== 'todos' && c.dataset.ambito !== f;
+      if (!c.hidden) shown++;
+    });
+    status.textContent = `Se muestran ${shown} estudios.`;
+  });
+});
+
+// Botón para volver al inicio
+const toTop = document.createElement('button');
+toTop.type = 'button';
+toTop.className = 'to-top';
+toTop.setAttribute('aria-label', 'Volver al inicio');
+toTop.title = 'Volver al inicio';
+toTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';
+toTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0 });
+  document.querySelector('.brand').focus({ preventScroll: true });
+});
+document.body.append(toTop);
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => { ticking = false; toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight); });
+}, { passive: true });
