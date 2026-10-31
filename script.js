@@ -148,9 +148,7 @@ toTop.addEventListener('click', () => {
 });
 document.body.append(toTop);
 
-// Progreso de lectura: mueve el reloj, llena la línea de tiempo y muestra el botón de inicio
-const timeline = document.querySelector('.timeline');
-const milestones = timeline ? timeline.querySelectorAll('li') : [];
+// Progreso de lectura: mueve el reloj y muestra el botón de inicio
 let ticking = false;
 function update() {
   ticking = false;
@@ -158,13 +156,6 @@ function update() {
   const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
   root.style.setProperty('--p', p.toFixed(4));
   toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight);
-  if (timeline) {
-    const mark = window.innerHeight * 0.6;
-    const r = timeline.getBoundingClientRect();
-    const fill = Math.min(1, Math.max(0, (mark - r.top) / r.height));
-    timeline.style.setProperty('--fill', fill.toFixed(3));
-    milestones.forEach((li) => li.classList.toggle('is-reached', li.getBoundingClientRect().top + 14 < mark));
-  }
 }
 function requestUpdate() {
   if (!ticking) { ticking = true; requestAnimationFrame(update); }
@@ -172,18 +163,6 @@ function requestUpdate() {
 window.addEventListener('scroll', requestUpdate, { passive: true });
 window.addEventListener('resize', requestUpdate);
 update();
-
-// Barras de participación: se llenan al llegar a ellas
-const share = document.querySelector('.share');
-if (share) {
-  const barObserver = new IntersectionObserver((entries) => {
-    if (entries.some((e) => e.isIntersecting)) {
-      share.classList.add('is-visible');
-      barObserver.disconnect();
-    }
-  }, { threshold: 0.25 });
-  barObserver.observe(share);
-}
 
 // Resalta en el menú la sección visible
 const links = document.querySelectorAll('.nav a');
