@@ -107,37 +107,6 @@ buttons.forEach((btn) => {
   });
 });
 
-// Escala de 7 puntos: al elegir un número se muestra su significado
-document.querySelectorAll('.scale--ends').forEach((scale) => {
-  const note = scale.nextElementSibling;
-  const labels = {};
-  (note ? note.textContent : '').split(',').forEach((part) => {
-    const m = part.match(/(\d+)\s*=\s*([^.,]+)/);
-    if (m) labels[m[1]] = m[2].trim();
-  });
-  const out = document.createElement('p');
-  out.className = 'scale__out';
-  out.setAttribute('aria-live', 'polite');
-  out.textContent = 'Elige un número para ver qué significa.';
-  scale.after(out);
-  const choices = [];
-  scale.querySelectorAll('.scale__n').forEach((span) => {
-    const n = span.textContent.trim();
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'scale__n';
-    b.textContent = n;
-    b.setAttribute('aria-pressed', 'false');
-    if (labels[n]) b.setAttribute('aria-label', `${n} = ${labels[n]}`);
-    b.addEventListener('click', () => {
-      choices.forEach((c) => c.setAttribute('aria-pressed', String(c === b)));
-      out.textContent = labels[n] ? `${n} = ${labels[n]}` : n;
-    });
-    choices.push(b);
-    span.replaceWith(b);
-  });
-});
-
 // Botón para volver al inicio
 const toTop = document.createElement('button');
 toTop.type = 'button';
