@@ -156,7 +156,7 @@ if (!reduceMotion.matches && 'IntersectionObserver' in window) {
   const revealSel = [
     'main > section:not(.cover) .kicker', 'main > section:not(.cover) h2', '.quote', '.define p', '.que-es__art',
     '.stats li', '.stats__legend', '.aside', '.factor', '.map', '.insights li', '.chart', 'details.more',
-    '.recos li', '.team li', '.credits'
+    '.quiz__card', '.recos li', '.team li', '.credits'
   ].join(',');
   const reveal = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -207,4 +207,40 @@ if (!reduceMotion.matches && 'IntersectionObserver' in window) {
     });
   }, { threshold: 0.6 });
   document.querySelectorAll('.stat__num:not(.stat__num--text)').forEach((el) => counter.observe(el));
+}
+
+// ¿Mito o realidad?: se responde con los botones (también con teclado); el resultado se anuncia con aria-live
+const quiz = document.querySelector('.quiz');
+if (quiz) {
+  const cards = [...quiz.querySelectorAll('.quiz__card')];
+  const score = document.querySelector('.quiz__score');
+  const icon = {
+    ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="m7.8 12.4 3 3 5.6-6.4"/></svg>',
+    bad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="m8.8 8.8 6.4 6.4M15.2 8.8l-6.4 6.4"/></svg>'
+  };
+  let hits = 0;
+  cards.forEach((card) => {
+    // Sin JavaScript la explicación se ve de entrada; con JavaScript se guarda hasta que se responde
+    const exp = card.querySelector('.quiz__exp');
+    const ans = exp.querySelector('.quiz__ans').textContent;
+    const text = exp.querySelector('p:not(.quiz__ans)').innerHTML;
+    exp.remove();
+    const fb = card.querySelector('.quiz__fb');
+    card.querySelectorAll('.quiz__btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (card.dataset.done) return;
+        card.dataset.done = '1';
+        const right = card.dataset.answer;
+        const ok = btn.dataset.choice === right;
+        btn.classList.add('is-chosen', ok ? 'ok' : 'bad');
+        card.querySelector(`.quiz__btn[data-choice="${right}"]`).classList.add('is-right');
+        fb.innerHTML = `<p class="quiz__res ${ok ? 'ok' : 'bad'}">${ok ? icon.ok : icon.bad}<span>${ok ? '¡Acertaste!' : 'No acertaste.'} ${ans}</span></p><p>${text}</p>`;
+        if (ok) hits++;
+        score.innerHTML = `Aciertos: <strong>${hits} de ${cards.length}</strong>`;
+        score.classList.remove('bump');
+        void score.offsetWidth;
+        score.classList.add('bump');
+      });
+    });
+  });
 }
