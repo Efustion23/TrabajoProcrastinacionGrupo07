@@ -19,16 +19,19 @@ function dial(className, full) {
     marks += `<line class="dial__tick${hour ? ' dial__tick--h' : ''}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
   }
   const numerals = full
-    ? '<text class="dial__num" x="100" y="44">XII</text><text class="dial__num" x="157" y="106">III</text>' +
-      '<text class="dial__num" x="100" y="168">VI</text><text class="dial__num" x="43" y="106">IX</text>'
+    ? '<text class="dial__num" x="100" y="44">XII</text><text class="dial__num" x="160" y="106">III</text>' +
+      '<text class="dial__num" x="100" y="168">VI</text><text class="dial__num" x="40" y="106">IX</text>'
     : '';
   return `<svg class="${className}" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
     <circle class="dial__case" cx="100" cy="100" r="96"/>
     ${full ? '<circle class="dial__face" cx="100" cy="100" r="88"/><circle class="dial__ring" cx="100" cy="100" r="62"/>' : ''}
     ${marks}${numerals}
     <g class="dial__hands">
-      <g class="dial__hand dial__hand--hour"><path d="M100 110V72"/><circle cx="100" cy="65" r="7"/><path d="M100 58V46"/></g>
-      <g class="dial__hand dial__hand--min"><path d="M100 114V56"/><circle cx="100" cy="49" r="6"/><path d="M100 43V24"/></g>
+      ${full
+        ? `<g class="dial__hand dial__hand--hour"><path d="M100 108V82"/><circle cx="100" cy="75" r="6.5"/><path d="M100 68.5V60"/></g>
+      <g class="dial__hand dial__hand--min"><path d="M100 114V68"/><circle cx="100" cy="61" r="6"/><path d="M100 55V52"/></g>`
+        : `<g class="dial__hand dial__hand--hour"><path d="M100 110V72"/><circle cx="100" cy="65" r="7"/><path d="M100 58V46"/></g>
+      <g class="dial__hand dial__hand--min"><path d="M100 114V56"/><circle cx="100" cy="49" r="6"/><path d="M100 43V24"/></g>`}
     </g>
     <circle class="dial__pin" cx="100" cy="100" r="${full ? 5 : 14}"/>
   </svg>`;
