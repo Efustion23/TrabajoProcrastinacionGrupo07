@@ -526,3 +526,37 @@ main > section { padding-block: clamp(4rem, 3rem + 5vw, 7rem); }
   .pass { grid-template-columns: 1fr; }
   .pass__stub { border-left: 0; border-top: 2px dashed var(--line); flex-direction: row; align-items: baseline; gap: .6rem; padding: .8rem 1.2rem; }
 }
+
+/* ---------- animaciones (solo si el usuario no pidió reducir movimiento) ---------- */
+.progress { position: fixed; left: 0; top: 0; z-index: 60; height: 4px; width: 100%; background: var(--signal); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .cover__text > * { animation: rise .8s var(--ease) both; }
+  .cover__text > :nth-child(2) { animation-delay: .08s; }
+  .cover__text > :nth-child(3) { animation-delay: .16s; }
+  .cover__text > :nth-child(4) { animation-delay: .26s; }
+  .cover__text > :nth-child(5) { animation-delay: .36s; }
+  .board { animation: board-in .9s .15s var(--ease) both; }
+  .cover h1 { animation: rise .8s .16s var(--ease) both, riso 1.2s .9s var(--ease) both; }
+
+  .anim .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
+  .anim .rv.is-in { opacity: 1; transform: none; }
+  .anim h2.rv { transform: translateX(-28px); }
+  .anim h2.rv.is-in { transform: none; }
+
+  .tilt { transition: transform .25s var(--ease), box-shadow .25s var(--ease); transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--ty, 0)); will-change: transform; }
+  .tilt:hover { --ty: -4px; box-shadow: 8px 10px 0 color-mix(in srgb, var(--ink) 85%, transparent); }
+  .eng .tilt:hover { box-shadow: 8px 10px 0 var(--signal); }
+
+  .btn::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .35) 50%, transparent 70%); transform: translateX(-120%); animation: shine 3.5s 1.6s ease-in-out infinite; }
+  .btn { position: relative; overflow: hidden; }
+  .sim__out.bump, .quiz__score.bump { animation: pop .35s var(--ease); }
+  .gauge__needle path { animation: none; }
+  .env-ui .env__item:not([hidden]) { animation: panel .45s var(--ease) both; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+@keyframes board-in { from { opacity: 0; transform: perspective(1200px) rotateY(-14deg) translateX(30px) scale(.96); } }
+@keyframes riso { from { text-shadow: .14em .1em 0 var(--signal); } }
+@keyframes shine { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+@keyframes pop { 50% { transform: scale(1.08); } }
+@keyframes panel { from { opacity: 0; transform: translateX(18px); } }
+@media (prefers-reduced-motion: reduce) { .progress { display: none; } }

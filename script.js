@@ -106,6 +106,92 @@ document.querySelectorAll('main > section[id]').forEach((s) => spy.observe(s));
 // Pictogramas y gráfico de barras: se completan al llegar a ellos
 if (!reduceMotion.matches && 'IntersectionObserver' in window) {
   root.classList.add('anim');
+
+  // Aparición escalonada de títulos y tarjetas
+  const rvSel = 'main > section:not(.cover) h2, .dict, .define, .ticket, .aside, .eng__big, .eng__item, .factor, .map, .sim__intro, .sim__panel, .reco-lead, .env-ui, .quiz__card, .insights li, .chart, .pass';
+  const rv = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      // también se muestra si ya quedó arriba (por ejemplo, al saltar con el menú)
+      if (!e.isIntersecting && e.boundingClientRect.top > 0) return;
+      const el = e.target;
+      el.classList.add('is-in');
+      rv.unobserve(el);
+      // al terminar, se quitan las clases para que el efecto de inclinación funcione libre
+      setTimeout(() => el.classList.remove('rv', 'is-in'), 1400);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+  document.querySelectorAll(rvSel).forEach((el) => {
+    const sib = [...el.parentElement.children].filter((c) => c.matches(rvSel));
+    el.style.setProperty('--d', Math.min(sib.indexOf(el), 5));
+    el.classList.add('rv');
+    rv.observe(el);
+  });
+
+  // Cifras que cuentan desde cero (el valor final queda para lectores de pantalla)
+  const counter = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      counter.unobserve(e.target);
+      const el = e.target;
+      const final = el.textContent.trim();
+      const m = final.match(/^(\d+(?:,\d+)?)\s*%$/);
+      if (!m) return;
+      const target = parseFloat(m[1].replace(',', '.'));
+      const dec = m[1].includes(',') ? m[1].split(',')[1].length : 0;
+      el.innerHTML = '<span class="sr-only"></span><span aria-hidden="true"></span>';
+      el.firstChild.textContent = final;
+      const live = el.lastChild;
+      const t0 = performance.now();
+      (function tick(now) {
+        const k = Math.min(1, (now - t0) / 1400);
+        live.textContent = (target * (1 - Math.pow(1 - k, 3))).toFixed(dec).replace('.', ',') + ' %';
+        if (k < 1) requestAnimationFrame(tick); else live.textContent = final;
+      })(t0);
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.ticket__num, .eng__num').forEach((el) => counter.observe(el));
+
+  // Inclinación 3D al pasar el mouse por boletos, fichas y pases
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.ticket, .eng__item, .eng__big, .pass, .quiz__card, .card').forEach((el) => {
+      el.classList.add('tilt');
+      el.addEventListener('pointermove', (ev) => {
+        const r = el.getBoundingClientRect();
+        const x = (ev.clientX - r.left) / r.width - 0.5;
+        const y = (ev.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty('--ry', (x * 6).toFixed(2) + 'deg');
+        el.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+      });
+      el.addEventListener('pointerleave', () => { el.style.removeProperty('--rx'); el.style.removeProperty('--ry'); });
+    });
+  }
+
+  // El tablero sigue cambiando estados mientras está a la vista
+  const ALPHA = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ';
+  const STATES = ['RETRASADO', 'MAÑANA', 'ÚLTIMA HORA', 'POSTERGADO', 'EN ESPERA', 'LUEGO', 'PENDIENTE'];
+  const groups = [...document.querySelectorAll('.flaps')];
+  let boardVisible = true;
+  new IntersectionObserver((en) => { boardVisible = en[0].isIntersecting; }).observe(document.querySelector('.board'));
+  let turn = 0;
+  setInterval(() => {
+    if (!boardVisible || document.hidden) return;
+    const g = groups[turn++ % groups.length];
+    const shown = groups.map((x) => x.dataset.text);
+    const opts = STATES.filter((s) => !shown.includes(s));
+    const next = opts[Math.floor(Math.random() * opts.length)];
+    g.dataset.text = next;
+    const cells = [...g.children];
+    const target = next.padEnd(cells.length, ' ');
+    cells.forEach((cell, col) => {
+      let steps = 4 + col;
+      const spin = () => {
+        cell.classList.remove('tick'); void cell.offsetWidth; cell.classList.add('tick');
+        if (steps-- > 0) { cell.textContent = ALPHA[Math.floor(Math.random() * ALPHA.length)]; setTimeout(spin, 65); }
+        else cell.textContent = target[col];
+      };
+      spin();
+    });
+  }, 4200);
   const lights = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (!e.isIntersecting) return;
@@ -140,7 +226,7 @@ if (!reduceMotion.matches && 'IntersectionObserver' in window) {
     const k = Math.max(-1, Math.min(1, Math.log10(m) / 1.5)); // de -1 (después) a 1 (hoy)
     needle.style.setProperty('--a', (k * 90).toFixed(1) + 'deg');
     const text = k < -0.25 ? 'Lo dejas para después.' : k > 0.3 ? 'Empiezas hoy.' : 'Empiezas, pero sin apuro.';
-    if (text !== last) { out.textContent = text; last = text; }
+    if (text !== last) { out.textContent = text; last = text; out.classList.remove('bump'); void out.offsetWidth; out.classList.add('bump'); }
   }
   form.addEventListener('input', update);
   update();
@@ -238,6 +324,7 @@ if (!reduceMotion.matches && 'IntersectionObserver' in window) {
         if (ok) hits++;
         done++;
         score.innerHTML = `Aciertos: <strong>${hits} de ${cards.length}</strong>` + (done === cards.length ? '. Respondiste todas.' : '');
+        score.classList.remove('bump'); void score.offsetWidth; score.classList.add('bump');
       });
     });
   });
@@ -272,9 +359,18 @@ toTop.addEventListener('click', () => {
   document.querySelector('.brand').focus({ preventScroll: true });
 });
 document.body.append(toTop);
+const progress = document.createElement('div');
+progress.className = 'progress';
+progress.setAttribute('aria-hidden', 'true');
+document.body.append(progress);
 let ticking = false;
 window.addEventListener('scroll', () => {
   if (ticking) return;
   ticking = true;
-  requestAnimationFrame(() => { ticking = false; toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight); });
+  requestAnimationFrame(() => {
+    ticking = false;
+    toTop.classList.toggle('is-shown', window.scrollY > window.innerHeight);
+    const max = root.scrollHeight - window.innerHeight;
+    progress.style.setProperty('--p', max > 0 ? (window.scrollY / max).toFixed(4) : 0);
+  });
 }, { passive: true });
